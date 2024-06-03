@@ -1311,7 +1311,7 @@ h2 {
   }
 }
 .casino-card__info:not(:last-child) {
-  margin: 0 0 12px 0;
+  margin: 0px 0 12px 0;
 }
 @media (max-width: 480.98px) {
   .casino-card__info:not(:last-child) {
@@ -1625,7 +1625,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px;
+  padding: 19px 20px 20px 20px;
 }
 .casino-big-card::before {
   position: absolute;
@@ -1657,9 +1657,6 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-}
-.casino-big-card__image.ibg {
-  background-position: right bottom;
 }
 .casino-big-card__top-small-card {
   position: relative;
@@ -1868,6 +1865,7 @@ h2 {
   height: 100%;
 }
 .different-casino-medium__name {
+  display: inline-flex;
   font-size: 16px;
   font-weight: 700;
   line-height: 22px;
@@ -2157,7 +2155,7 @@ h2 {
   font-size: 16px;
   line-height: 22px;
   color: var(--Text-Txt_Main, #FFFFFF);
-  margin: 0 12px 0 0;
+  margin: 0 16px 0 3px;
 }
 @media (max-width: 480.98px) {
   .different-casino-standart__number {
@@ -2376,6 +2374,31 @@ h2 {
 }
 .different-casino-standart .tags-casino-card__item:not(:last-child) {
   margin: 0 4px 8px 0;
+}
+
+.slide-slider-column_standart-number:nth-child(1) .different-casino-standart:nth-child(1) .different-casino-standart__number {
+  margin: 0 17px 0 4px;
+}
+@media (max-width: 480.98px) {
+  .slide-slider-column_standart-number:nth-child(1) .different-casino-standart:nth-child(1) {
+    margin: 0 8px 0 0;
+  }
+}
+.slide-slider-column_standart-number:nth-child(4) .different-casino-standart:nth-child(2) .different-casino-standart__number {
+  margin: 0 13px 0 2px;
+}
+@media (max-width: 480.98px) {
+  .slide-slider-column_standart-number:nth-child(4) .different-casino-standart:nth-child(2) {
+    margin: 0 8px 0 0;
+  }
+}
+.slide-slider-column_standart-number:nth-child(n+4) .different-casino-standart__number {
+  margin: 0 12px 0 0px;
+}
+@media (max-width: 480.98px) {
+  .slide-slider-column_standart-number:nth-child(n+4) {
+    margin: 0 8px 0 0;
+  }
 }
 
 .different-casino-big {
@@ -2599,6 +2622,9 @@ h2 {
   margin: 0 0 0 4px;
 }
 
+.bottom-filter-tags__top {
+  transform: translate(2px, 0);
+}
 .bottom-filter-tags__top .top__title-icon {
   flex: 0 0 18px;
   width: 18px;
@@ -3017,7 +3043,7 @@ h2 {
   width: 18px;
   height: 18px;
   left: 0;
-  top: 0;
+  top: -1px;
   border-radius: 4px;
   overflow: hidden;
   background: var(--BG-Bg_2, #232320);
@@ -3046,7 +3072,7 @@ h2 {
   background: url("../img/icons/check.svg") center no-repeat;
   position: absolute;
   left: 0;
-  top: 0;
+  top: -1px;
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
@@ -3115,7 +3141,7 @@ h2 {
   font-weight: 400;
   line-height: 22px;
   color: var(--Text-Txt_Main, #FFFFFF);
-  padding: 0 40px;
+  padding: 0 40px 0 35px;
 }
 .item-form-subscribe__input::placeholder {
   color: var(--Text-Txt_Sec, rgba(255, 255, 255, 0.5019607843));
@@ -5886,7 +5912,14 @@ h2 {
   margin: 0 0 68px 0;
 }
 .main-gamble__top-gainers-casinos:not(:last-child) {
-  margin: 0 0 60px 0;
+  margin: 0 0 59px 0;
+}
+.main-gamble__top-gainers-casinos .item-baner-row-block {
+  padding: 18px 20px 22px 20px;
+}
+.main-gamble__top-gainers-casinos .baner-row-block__slider-bottom {
+  left: 18.5px;
+  bottom: 18.5px;
 }
 .main-gamble__top-gainers-casinos-2 .swiper {
   overflow: hidden;
@@ -5921,7 +5954,7 @@ h2 {
   }
 }
 .main-gamble__best-casinos-2024-2:not(:last-child) {
-  margin: 57px 0 60px 0;
+  margin: 59px 0 60px 0;
 }
 @media (max-width: 480.98px) {
   .main-gamble__best-casinos-2024-2 {
@@ -5929,7 +5962,7 @@ h2 {
   }
 }
 .main-gamble__best-live-dealer-casinos:not(:last-child) {
-  margin: 0 0 40px 0;
+  margin: -2px 0 40px 0;
 }
 .main-gamble__bottom-filter-tags:not(:last-child) {
   margin: 0 0 60px 0;
@@ -5956,7 +5989,103 @@ h2 {
   }
 }
 .main-gamble__low-risk-bonuses:not(:last-child) {
-  margin: 0 0 65px 0;
+  margin: 0 0 93px 0;
+}
+.main-gamble__low-risk-bonuses .different-casino-bg::before {
+  filter: blur(168px);
+  -webkit-filter: blur(168px);
+}
+.main-gamble__low-risk-bonuses .swiper-slide:nth-child(2), .main-gamble__low-risk-bonuses .swiper-slide:nth-child(3) {
+  transform: translate(0.5px, 0);
+}
+.main-gamble__low-risk-bonuses .swiper-slide:nth-child(4), .main-gamble__low-risk-bonuses .swiper-slide:nth-child(5) {
+  transform: translate(2.5px, 0);
+}
+.main-gamble__low-risk-bonuses .swiper-slide:nth-child(6), .main-gamble__low-risk-bonuses .swiper-slide:nth-child(7) {
+  transform: translate(4px, 0);
+}
+.main-gamble__low-risk-bonuses .swiper-slide:nth-child(8), .main-gamble__low-risk-bonuses .swiper-slide:nth-child(9) {
+  transform: translate(5.5px, 0);
+}
+.main-gamble__low-risk-bonuses .swiper-slide:nth-child(10), .main-gamble__low-risk-bonuses .swiper-slide:nth-child(11) {
+  transform: translate(7px, 0);
+}
+.main-gamble__low-risk-bonuses .swiper-slide:nth-child(12), .main-gamble__low-risk-bonuses .swiper-slide:nth-child(13) {
+  transform: translate(8.5px, 0);
+}
+.main-gamble__low-risk-bonuses .different-casino-bg {
+  padding: 19px 20px 20px 20px;
+}
+.main-gamble__fastest-payout-casinos .slider__body:not(:last-child) {
+  margin: 0 0 20.5px 0;
+}
+@media (max-width: 480.98px) {
+  .main-gamble__fastest-payout-casinos .slider__body:not(:last-child) {
+    margin: 0 0 16px 0;
+  }
+}
+.main-gamble__low-wager-bonuses {
+  margin: -1.5px 0 0 0;
+}
+.main-gamble__low-wager-bonuses .casino-card__image-block:not(:last-child) {
+  margin: 0 0 16px 0;
+}
+@media (max-width: 480.98px) {
+  .main-gamble__low-wager-bonuses .casino-card__image-block:not(:last-child) {
+    margin: 0 0 8px 0;
+  }
+}
+.main-gamble__low-wager-bonuses-2 {
+  margin: -1.5px 0 0 0;
+}
+.main-gamble__low-wager-bonuses-2 .casino-card__image-block:not(:last-child) {
+  margin: 0 0 16px 0;
+}
+@media (max-width: 480.98px) {
+  .main-gamble__low-wager-bonuses-2 .casino-card__image-block:not(:last-child) {
+    margin: 0 0 8px 0;
+  }
+}
+.main-gamble__welcome-bonus-packs .casino-card__image-block:not(:last-child) {
+  margin: -2px 0 11px 0;
+}
+@media (max-width: 480.98px) {
+  .main-gamble__welcome-bonus-packs .casino-card__image-block:not(:last-child) {
+    margin: 0 0 8px 0;
+  }
+}
+.main-gamble__popular-bonuses-finland .casino-card__image-block:not(:last-child) {
+  margin: -2px 0 11px 0;
+}
+@media (max-width: 480.98px) {
+  .main-gamble__popular-bonuses-finland .casino-card__image-block:not(:last-child) {
+    margin: 0 0 8px 0;
+  }
+}
+.main-gamble__non-sticky-bonuses {
+  margin: -1px 0 0 0;
+}
+.main-gamble__non-sticky-bonuses .casino-card__image-block:not(:last-child) {
+  margin: -1px 0 11px 0;
+}
+@media (max-width: 480.98px) {
+  .main-gamble__non-sticky-bonuses .casino-card__image-block:not(:last-child) {
+    margin: 0 0 8px 0;
+  }
+}
+.main-gamble__highest-max-bet-bonuses {
+  margin: -1px 0 0 0;
+}
+.main-gamble__low-wager-bonuses-3 {
+  margin: -1.5px 0 0 0;
+}
+.main-gamble__low-wager-bonuses-3 .casino-card__image-block:not(:last-child) {
+  margin: 0 0 18px 0;
+}
+@media (max-width: 480.98px) {
+  .main-gamble__low-wager-bonuses-3 .casino-card__image-block:not(:last-child) {
+    margin: 0 0 8px 0;
+  }
 }
 
 .row-block {
@@ -6118,8 +6247,8 @@ h2 {
 }
 .baner-row-block__slider-bottom {
   position: absolute;
-  left: 20px;
-  bottom: 20px;
+  left: 19px;
+  bottom: 17.5px;
 }
 .baner-row-block__pagination .swiper-pagination-bullet {
   background: var(--Icons-Icons_Main, #FFFFFF);
@@ -6171,6 +6300,9 @@ h2 {
 .item-baner-row-block__small-card .casino-small-card__name {
   display: inline-block;
 }
+.item-baner-row-block__small-card .casino-small-card__info {
+  transform: translate(1px, 0);
+}
 .item-baner-row-block__index {
   display: flex;
   align-items: center;
@@ -6214,6 +6346,14 @@ h2 {
     color: var(--Colors-Accent, #FFCF23);
   }
 }
+.todays-hot-gamble .casino-card__image-block:not(:last-child) {
+  margin: 0 0 11.55px 0;
+}
+@media (max-width: 480.98px) {
+  .todays-hot-gamble .casino-card__image-block:not(:last-child) {
+    margin: 0 0 8px 0;
+  }
+}
 .todays-hot-gamble .top__title-icon {
   flex: 0 0 22px;
   width: 22px;
@@ -6227,16 +6367,21 @@ h2 {
   }
 }
 
+.playing-now-gamble .top__title-block {
+  transform: translate(-4px, 0);
+}
 .playing-now-gamble .top__title-icon {
   flex: 0 0 36px;
   width: 28px;
   height: 28px;
+  margin: 0 9px 0 0;
 }
 @media (max-width: 480.98px) {
   .playing-now-gamble .top__title-icon {
     flex: 0 0 20px;
     width: 20px;
     height: 20px;
+    margin: 0 6px 0 0;
   }
 }
 
@@ -6470,15 +6615,22 @@ h2 {
   }
 }
 .item-essential-programs-gamble__rating {
+  height: 64px;
   border-radius: var(--SystemCorners-Small, 8px);
   border: 1px solid var(--BG-Bg_3, #2C2C28);
   overflow: hidden;
-  padding: 12px;
+  padding: 5px 12px;
   display: flex;
   align-items: center;
 }
 .item-essential-programs-gamble__rating:not(:last-child) {
   margin: 0 0 20px 0;
+}
+@media (max-width: 1650.98px) {
+  .item-essential-programs-gamble__rating {
+    padding: 12px;
+    height: auto;
+  }
 }
 @media (max-width: 768.98px) {
   .item-essential-programs-gamble__rating {
@@ -6811,6 +6963,9 @@ h2 {
     flex: 1 1 100%;
   }
 }
+.deposit-top-bonuses-gamble:nth-child(3) .deposit-top-bonuses-gamble__title, .deposit-top-bonuses-gamble:nth-child(4) .deposit-top-bonuses-gamble__title {
+  line-height: 22px;
+}
 .deposit-top-bonuses-gamble__image-block {
   position: relative;
   flex: 0 0 120px;
@@ -6829,6 +6984,10 @@ h2 {
 }
 .deposit-top-bonuses-gamble__body {
   flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
 }
 .deposit-top-bonuses-gamble__title {
   display: inline-block;
@@ -6851,8 +7010,6 @@ h2 {
 .deposit-top-bonuses-gamble__stake {
   display: flex;
   align-items: center;
-}
-.deposit-top-bonuses-gamble__stake:not(:last-child) {
   margin: 0 0 10px 0;
 }
 .deposit-top-bonuses-gamble__stake-link {
@@ -6961,6 +7118,9 @@ h2 {
 .info-deposit-top-bonuses-gamble__column {
   display: flex;
   align-items: center;
+}
+.info-deposit-top-bonuses-gamble__column:first-child {
+  margin: 0 0 1px 0;
 }
 .info-deposit-top-bonuses-gamble__icon {
   flex: 0 0 16px;
@@ -7186,7 +7346,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transform: translate(0, -2px);
+  transform: translate(0, -4px);
 }
 @media (max-width: 1650.98px) {
   .slider-best-casinos-2024-gamble {
@@ -7291,6 +7451,12 @@ h2 {
     width: 90px;
     height: 90px;
   }
+}
+.slider-best-casinos-2024-gamble__slide .different-casino-medium__name {
+  display: inline-flex;
+}
+.slider-best-casinos-2024-gamble__slide .different-casino-medium__name:not(:last-child) {
+  margin: 0 0 5px 0;
 }
 
 @media (max-width: 530.98px) {
@@ -7729,6 +7895,9 @@ h2 {
     width: 74px;
     height: 74px;
   }
+}
+.vpn-friendly-casinos-2-gamble .info-casino-card__stake-link {
+  margin: 0 5px 0 0;
 }
 
 .best-live-dealer-casinos-gamble__row {
