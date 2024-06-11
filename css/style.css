@@ -1113,6 +1113,9 @@ h2 {
 .slider__body .swiper {
   overflow: visible;
 }
+.slider__body .swiper-slide {
+  width: 336px;
+}
 @media (max-width: 1650.98px) {
   .slider__body .swiper-slide {
     width: 282px;
@@ -1745,6 +1748,9 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
+}
+.casino-big-card__image.ibg {
+  background-position: right center;
 }
 .casino-big-card__top-small-card {
   position: relative;
@@ -3079,7 +3085,7 @@ h2 {
 }
 @media (min-width: 1355.98px) {
   .form-subscribe__btn:hover {
-    background: #FFDB5A;
+    background: #fde075;
   }
 }
 @media (max-width: 650.98px) {
@@ -5411,6 +5417,34 @@ h2 {
     transform: translate(0, 0);
   }
 }
+.main-gamble.resize .slider__body .swiper-slide {
+  width: 282px;
+}
+@media (max-width: 1650.98px) {
+  .main-gamble.resize .slider__body .swiper-slide {
+    width: 282px;
+  }
+}
+@media (max-width: 480.98px) {
+  .main-gamble.resize .slider__body .swiper-slide {
+    width: 300px;
+  }
+}
+@media (max-width: 480.98px) {
+  .main-gamble.resize .main-gamble__safest-casino-2 .swiper-slide {
+    width: 320px;
+  }
+}
+@media (max-width: 480.98px) {
+  .main-gamble.resize .main-gamble__safest-casino-2 .swiper-slide {
+    width: 320px;
+  }
+}
+@media (max-width: 480.98px) {
+  .main-gamble.resize .main-gamble__safest-casinos .swiper-slide {
+    width: 320px;
+  }
+}
 .main-gamble.resize .casino-card__image-block {
   height: 142.31px;
   padding: 8.31px 8px;
@@ -5932,6 +5966,27 @@ h2 {
     top: 123.56px;
   }
 }
+.main-gamble.resize .main-gamble__casino-big-cards .swiper-slide {
+  width: 483px;
+}
+@media (max-width: 1650.98px) {
+  .main-gamble.resize .main-gamble__casino-big-cards .swiper-slide {
+    width: 483px;
+  }
+}
+@media (max-width: 1355.98px) {
+  .main-gamble.resize .main-gamble__casino-big-cards .swiper-slide {
+    width: 414px;
+  }
+}
+@media (max-width: 768.98px) and (max-width: 1650.98px) {
+  .main-gamble.resize .main-gamble__casino-big-cards .swiper-slide {
+    width: 483px;
+  }
+}
+.main-gamble.resize .item-baner-row-block__btn {
+  top: auto;
+}
 .main-gamble__body {
   width: 100%;
   padding: 24px 0 0 0;
@@ -5954,13 +6009,8 @@ h2 {
     display: none;
   }
 }
-.main-gamble__casino-big-cards .slider .swiper {
-  overflow: hidden;
-}
-@media (max-width: 1650.98px) {
-  .main-gamble__casino-big-cards .slider .swiper {
-    overflow: visible;
-  }
+.main-gamble__casino-big-cards .slider .swiper-slide {
+  width: 573.33px;
 }
 @media (max-width: 1650.98px) {
   .main-gamble__casino-big-cards .slider .swiper-slide {
@@ -7396,9 +7446,28 @@ h2 {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+.deposit-top-bonuses-gamble__btn::after {
+  position: relative;
+  content: "";
+  transition: opacity 0.3s, visibility 0.3s;
+  width: 0;
+  height: 16px;
+  background: url("../img/icons/btn-hover.svg") center no-repeat;
+  background-size: contain;
+  opacity: 0;
+  visibility: hidden;
+  transition: margin 0.3s;
+}
 @media (min-width: 1355.98px) {
   .deposit-top-bonuses-gamble__btn:hover {
     background: #FFDB5A;
+  }
+  .deposit-top-bonuses-gamble__btn:hover::after {
+    flex: 0 0 16px;
+    width: 16px;
+    opacity: 1;
+    visibility: visible;
+    margin: 0 0 0 15px;
   }
 }
 .deposit-top-bonuses-gamble__btn:active {
@@ -8117,7 +8186,7 @@ h2 {
 }
 @media (min-width: 1355.98px) {
   .best-casinos-2024-2-gamble__btn:hover {
-    background: #FFDB5A;
+    background: #fde075;
   }
 }
 .best-casinos-2024-2-gamble__btn:active {
@@ -8551,7 +8620,7 @@ h2 {
 }
 @media (min-width: 1355.98px) {
   .best-live-dealer-casinos-gamble__btn:hover {
-    background: #FFDB5A;
+    background: #fde075;
   }
 }
 @media (max-width: 1355.98px) {
