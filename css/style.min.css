@@ -1131,6 +1131,9 @@ h2 {
     margin: 0 0 6px 0;
   }
 }
+.slide-slider {
+  position: relative;
+}
 .slide-slider__item-column {
   display: flex;
   flex-direction: column;
@@ -1752,6 +1755,27 @@ h2 {
 .casino-big-card__image.ibg {
   background-position: right center;
 }
+.casino-big-card__top {
+  position: absolute;
+  z-index: 20;
+  top: 19px;
+  left: 20px;
+}
+@media (max-width: 1355.98px) {
+  .casino-big-card__top {
+    top: 17.14px;
+    left: 17.14px;
+  }
+}
+@media (max-width: 768.98px) {
+  .casino-big-card__top {
+    top: 20px;
+    left: 20px;
+  }
+}
+.casino-big-card__top .slide-slider__item {
+  display: none;
+}
 .casino-big-card__top-small-card {
   position: relative;
 }
@@ -1840,11 +1864,28 @@ h2 {
   }
 }
 .casino-big-card__bottom {
-  position: relative;
   z-index: 2;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  position: absolute;
+  bottom: 19px;
+  left: 20px;
+  width: calc(100% - 40px);
+}
+@media (max-width: 1355.98px) {
+  .casino-big-card__bottom {
+    bottom: 17.14px;
+    left: 17.14px;
+    width: calc(100% - 34.28px);
+  }
+}
+@media (max-width: 768.98px) {
+  .casino-big-card__bottom {
+    bottom: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+  }
 }
 .casino-big-card__title {
   font-size: 22px;
@@ -6649,19 +6690,32 @@ h2 {
   height: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   position: relative;
 }
 .item-baner-row-block__row .item-baner-row-block {
   display: none;
 }
+.item-baner-row-block__column {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
 .item-baner-row-block__column:first-child {
   padding: 0 0 22px 0;
+  height: auto;
+  top: 20px;
+  left: 20px;
 }
 .item-baner-row-block__column:last-child {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   margin: 0 0 0 20px;
+  bottom: 20px;
+  top: auto;
+  left: auto;
+  right: 20px;
 }
 .item-baner-row-block__small-card .casino-small-card__image-block {
   flex: 0 0 56px;
