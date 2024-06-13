@@ -789,6 +789,7 @@ input[type=number]::-webkit-inner-spin-button {
 .bottom-form-filters__btn_submit {
   background: var(--Colors-Accent, #FFCF23);
   color: var(--Text-Txt_Dark, #020202);
+  font-weight: 750;
 }
 .bottom-form-filters__btn_submit:active {
   background: #BF9B1A;
@@ -1330,7 +1331,7 @@ h2 {
   border-radius: var(--SystemCorners-Small, 8px);
   background: var(--Colors-Accent, #FFCF23);
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 750;
   line-height: 22px;
   color: var(--Text-Txt_Dark, #020202);
   position: absolute;
@@ -1558,6 +1559,7 @@ h2 {
   font-weight: 500;
   line-height: 17.76px;
   margin: 0 0 8px 0;
+  cursor: default;
 }
 .tags-casino-card__item:not(:last-child) {
   margin: 0 8px 8px 0;
@@ -1655,6 +1657,7 @@ h2 {
   position: relative;
   display: flex;
   align-items: center;
+  cursor: default;
 }
 .casino-small-card__info-link:not(:last-child) {
   margin: 0 14px 0 0;
@@ -1928,7 +1931,7 @@ h2 {
   border-radius: var(--SystemCorners-Small, 8px);
   background: var(--Colors-Accent, #FFCF23);
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 750;
   line-height: 22px;
   color: var(--Text-Txt_Dark, #020202);
   position: relative;
@@ -2164,6 +2167,7 @@ h2 {
   position: relative;
   display: flex;
   align-items: center;
+  cursor: default;
 }
 .different-casino-bg__info-link:not(:last-child) {
   margin: 0 13px 0 0;
@@ -2413,6 +2417,7 @@ h2 {
   position: relative;
   display: flex;
   align-items: center;
+  cursor: default;
 }
 .different-casino-standart__info-link:not(:last-child) {
   margin: 0 13px 0 0;
@@ -2643,6 +2648,7 @@ h2 {
   position: relative;
   display: flex;
   align-items: center;
+  cursor: default;
 }
 .different-casino-big__info-link:not(:last-child) {
   margin: 0 13px 0 0;
@@ -2807,7 +2813,7 @@ h2 {
   background: var(--Colors-Accent, #FFCF23);
   color: var(--Text-Txt_Dark, #020202);
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 750;
   line-height: 22px;
   padding: 5px 24px;
   -webkit-transition: all 0.3s ease 0s;
@@ -3112,7 +3118,7 @@ h2 {
   justify-content: center;
   text-align: center;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 750;
   line-height: 22px;
   color: #111111;
   -webkit-transition: all 0.3s ease 0s;
@@ -3802,6 +3808,7 @@ h2 {
 .menu-header__link.current {
   background: var(--Colors-Accent, #FFCF23);
   color: var(--Text-Txt_Dark, #020202);
+  font-weight: 700;
 }
 @media (max-width: 1355.98px) {
   .menu-header__link.current {
@@ -6028,6 +6035,9 @@ h2 {
 .main-gamble.resize .item-baner-row-block__btn {
   top: auto;
 }
+.main-gamble.resize .main-gamble__different-casino-bg .swiper-slide {
+  width: 177.78px;
+}
 .main-gamble__body {
   width: 100%;
   padding: 24px 0 0 0;
@@ -6094,7 +6104,7 @@ h2 {
     display: none;
   }
 }
-.main-gamble__different-casino-bg .slide-slider__different-casino-bg {
+.main-gamble__different-casino-bg .slide-slider__different-casino-bg.swiper-slide {
   width: 177.78px;
   height: auto;
 }
@@ -7487,7 +7497,7 @@ h2 {
   overflow: hidden;
   background: var(--Colors-Accent, #FFCF23);
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 650;
   line-height: 20px;
   color: var(--Text-Txt_Dark, #020202);
   display: flex;
@@ -8229,7 +8239,7 @@ h2 {
   background: var(--Colors-Accent, #FFCF23);
   padding: 5px 20px;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 750;
   line-height: 28px;
   color: var(--Text-Txt_Dark, #020202);
   -webkit-transition: all 0.3s ease 0s;
@@ -8353,6 +8363,16 @@ h2 {
   margin: 1.5px 4px 0 0;
 }
 
+@media (max-width: 480.98px) {
+  .best-live-dealer-casinos-gamble__container {
+    padding: 0;
+  }
+}
+@media (max-width: 480.98px) {
+  .best-live-dealer-casinos-gamble__top {
+    padding: 0 16px;
+  }
+}
 .best-live-dealer-casinos-gamble__row {
   position: relative;
   border-radius: var(--SystemCorners-Medium, 12px);
@@ -8379,6 +8399,11 @@ h2 {
   .best-live-dealer-casinos-gamble__row {
     height: 245px;
     padding: 0;
+  }
+}
+@media (max-width: 480.98px) {
+  .best-live-dealer-casinos-gamble__row {
+    border-radius: 0;
   }
 }
 .best-live-dealer-casinos-gamble__bg {
@@ -8651,7 +8676,7 @@ h2 {
   overflow: hidden;
   background: var(--Colors-Accent, #FFCF23);
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 750;
   line-height: 28px;
   color: var(--Text-Txt_Dark, #020202);
   -webkit-transition: all 0.3s ease 0s;
@@ -8956,4 +8981,110 @@ h2 {
 }
 .vpn-friendly-casinos-3-gamble .info-casino-card__stake-rating-icon {
   margin: 1.5px 4px 0 0;
+}
+
+@media (min-width: 1650.98px) {
+  .new-bonuses-gamble .casino-small-card__rating-icon {
+    margin: 0.395px 4px 0 0;
+  }
+}
+
+@media (min-width: 1650.98px) {
+  .fastest-payout-casinos-gamble .casino-small-card__rating-icon {
+    margin: 0.1px 4px 0 0;
+  }
+}
+
+@media (min-width: 1650.98px) {
+  .top-bonuses-gamble .deposit-top-bonuses-gamble__stake-icon {
+    margin: 0 4px 1px 0;
+  }
+}
+@media (max-width: 768.98px) {
+  .top-bonuses-gamble .deposit-top-bonuses-gamble__stake-icon {
+    margin: 1px 4px 0 0;
+  }
+}
+
+@media (min-width: 1650.98px) {
+  .top-gainers-casinos-gamble .different-casino-small__rating-icon {
+    margin: 0px 4px 3.6px 0;
+  }
+}
+@media (min-width: 1650.98px) {
+  .top-gainers-casinos-gamble .casino-small-card__rating-icon {
+    margin: 0.828px 4px 0px 0;
+  }
+}
+
+@media (min-width: 1650.98px) {
+  .best-live-dealer-casinos-gamble .casino-small-card__rating-icon {
+    margin: 0.515px 4px 0px 0;
+  }
+}
+
+@media (min-width: 1650.98px) {
+  .top-gainers-casinos-2-gamble .different-casino-standart__rating-icon {
+    margin: 0px 4px 2.35px 0;
+  }
+}
+
+@media (min-width: 1650.98px) {
+  .newly-opened-casinos-gamble .different-casino-medium__rating-icon {
+    margin: 0px 4px 2px 0;
+  }
+}
+
+@media (min-width: 1650.98px) {
+  .best-casinos-2024-gamble .different-casino-medium__rating-icon {
+    margin: 0px 4px 2.75px 0;
+  }
+}
+
+@media (min-width: 1650.98px) {
+  .welcome-bonus-packs-gamble .info-casino-card__stake-rating-icon {
+    margin: 0.99px 4px 0px 0;
+  }
+}
+
+@media (min-width: 1650.98px) {
+  .popular-bonuses-finland-gamble .casino-small-card__rating-icon {
+    margin: 0.32813px 4px 0px 0;
+  }
+}
+
+@media (min-width: 1650.98px) {
+  .non-sticky-bonuses-gamble .info-casino-card__stake-rating-icon {
+    margin: 0.3px 4px 0px 0;
+  }
+}
+
+@media (min-width: 1650.98px) {
+  .vpn-friendly-casinos-2-gamble .info-casino-card__stake-rating-icon {
+    margin: 0.5px 4px 0px 0;
+  }
+}
+
+@media (min-width: 1650.98px) {
+  .best-casinos-2024-2-gamble .different-casino-big__rating-icon {
+    margin: 0px 4px 3.105px 0;
+  }
+}
+
+@media (min-width: 1650.98px) {
+  .crypto-casinos-gamble .different-casino-medium__rating-icon {
+    margin: 0px 4px 3.3px 0;
+  }
+}
+
+@media (min-width: 1650.98px) {
+  .highest-max-bet-bonuses-gamble .info-casino-card__stake-rating-icon {
+    margin: 1px 4px 0px 0;
+  }
+}
+
+@media (min-width: 1650.98px) {
+  .low-wager-bonuses-gamble .info-casino-card__stake-rating-icon {
+    margin: 0.9531px 4px 0px 0;
+  }
 }
