@@ -51,6 +51,7 @@
   --SystemCorners-Medium: 12px;
   --SystemCorners-Small: 8px;
   --SystemCorners-ExtraSmall: 6px;
+  --SystemCorners-Round: 100px;
   --Text-Txt_Main: #fff;
   --Text-Txt_Dark: #020202;
   --Text-Txt_Sec: #FFFFFF80;
@@ -59,6 +60,10 @@
   --Colors-Red: #FF3232;
   --Colors-Green: #76DBA1;
   --Colors-Ocean: #83D1FC;
+  --Colors-Purple: #AD7BFF;
+  --Colors-Purple_Transp: #AD7BFF29;
+  --Colors-Grass_Transp: #ACE54E29;
+  --Colors-Grass: #ACE54E;
 }
 
 * {
@@ -850,6 +855,18 @@ h2 {
   }
 }
 
+h3 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 127.2727272727%;
+}
+@media (max-width: 650.98px) {
+  h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
 .info-info {
   display: flex;
   align-items: center;
@@ -1411,6 +1428,9 @@ h2 {
     color: var(--Colors-Accent, #FFCF23);
   }
 }
+.casino-card__name:not(:last-child) {
+  margin: 0 0 12px 0;
+}
 @media (max-width: 480.98px) {
   .casino-card__name {
     font-size: 14px;
@@ -1481,7 +1501,7 @@ h2 {
 }
 @media (min-width: 1355.98px) {
   .info-casino-card__stake-link:hover {
-    color: var(--Text-Txt_Main, #FFFFFF);
+    color: #d6d6d6;
   }
 }
 @media (max-width: 480.98px) {
@@ -1577,6 +1597,23 @@ h2 {
 .tags-casino-card__item_blue {
   color: var(--Colors-Ocean, #83D1FC);
   background: var(--Colors-Ocean_Transp, rgba(131, 209, 252, 0.1607843137));
+}
+.tags-casino-card__item_purple {
+  color: var(--Colors-Purple, #AD7BFF);
+  background: var(--Colors-Purple_Transp, rgba(173, 123, 255, 0.1607843137));
+}
+.tags-casino-card__item_grass {
+  color: var(--Colors-Grass, #ACE54E);
+  background: var(--Colors-Grass_Transp, rgba(172, 229, 78, 0.1607843137));
+}
+.tags-casino-card__item_grass svg {
+  width: 11px;
+  height: 12px;
+  fill: var(--Colors-Grass, #ACE54E);
+}
+.tags-casino-card__item_orange {
+  color: var(--Colors-Orange, #F96B2F);
+  background: var(--Colors-Orange_Transp, rgba(249, 107, 47, 0.1607843137));
 }
 .casino-small-card {
   display: flex;
@@ -3319,6 +3356,74 @@ h2 {
   pointer-events: none;
 }
 
+.breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.breadcrumbs__item {
+  padding: 6px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.breadcrumbs__item:not(:last-child) {
+  margin: 0 8px 0 0;
+}
+.breadcrumbs__item:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  flex: 0 0 4px;
+  width: 4px;
+  height: 8px;
+  right: -8px;
+  background: url("../img/icons/arrow-yellow.svg") center no-repeat;
+  background-size: contain;
+}
+.breadcrumbs__item a {
+  color: var(--Text-Txt_Sec, rgba(255, 255, 255, 0.5019607843));
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (min-width: 1355.98px) {
+  .breadcrumbs__item a:hover {
+    color: #fff;
+  }
+}
+.breadcrumbs__item span {
+  color: #4C4C4C;
+}
+.breadcrumbs__link {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 17.76px;
+}
+@media (max-width: 650.98px) {
+  .breadcrumbs__link {
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+
+.info-icon {
+  display: flex;
+  align-items: center;
+}
+.info-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--Colors-Yellow, #FFCF23);
+}
+@media (max-width: 650.98px) {
+  .info-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
 .ibg {
   background-position: center;
   background-size: cover;
@@ -3808,7 +3913,7 @@ h2 {
 .menu-header__link.current {
   background: var(--Colors-Accent, #FFCF23);
   color: var(--Text-Txt_Dark, #020202);
-  font-weight: 700;
+  font-weight: 750;
 }
 @media (max-width: 1355.98px) {
   .menu-header__link.current {
@@ -4080,6 +4185,225 @@ h2 {
     height: 22px;
     top: 3.51px;
     left: 2.8px;
+  }
+}
+
+.dropdown-language-header {
+  position: relative;
+  z-index: 1000;
+}
+.dropdown-language-header.active .dropdown-language-header__body {
+  display: block;
+}
+.dropdown-language-header__btn {
+  background-color: transparent;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.dropdown-language-header__btn::before {
+  position: absolute;
+  content: "";
+  flex: 0 0 28px;
+  width: 28px;
+  height: 29px;
+  background: url("../img/icons/flag-before.svg") top right no-repeat;
+  background-size: cover;
+  top: 4.69px;
+  left: 4.69px;
+}
+.dropdown-language-header__btn img {
+  width: 100%;
+  height: 100%;
+}
+.dropdown-language-header__btn svg {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 650.98px) {
+  .dropdown-language-header__btn {
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+  }
+  .dropdown-language-header__btn::before {
+    flex: 0 0 21px;
+    width: 21px;
+    height: 22px;
+    top: 3.51px;
+    left: 2.8px;
+  }
+}
+.dropdown-language-header__body {
+  display: none;
+  position: absolute;
+  right: 0;
+  transform: translate(12px, 21px);
+  width: 240px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2509803922);
+  background: var(--BG-Bg_3, #2C2C28);
+  border-radius: var(--SystemCorners-Small, 8px);
+  padding: 8px 6px 8px 12px;
+}
+.dropdown-language-header__body::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 9px;
+  border-left-width: 9px;
+  border-bottom: 9px solid var(--BG-Bg_3, #2C2C28);
+  right: 19px;
+  top: -8px;
+}
+@media (max-width: 1650.98px) {
+  .dropdown-language-header__body::before {
+    right: 15px;
+  }
+}
+@media (max-width: 650.98px) {
+  .dropdown-language-header__body::before {
+    right: 11px;
+  }
+}
+@media (max-width: 1650.98px) {
+  .dropdown-language-header__body {
+    transform: translate(8px, 21px);
+  }
+}
+@media (max-width: 768.98px) {
+  .dropdown-language-header__body {
+    width: 220px;
+    transform: translate(8px, 18.5px);
+  }
+}
+@media (max-width: 480.98px) {
+  .dropdown-language-header__body {
+    width: 200px;
+    transform: translate(8px, 16px);
+  }
+}
+.dropdown-language-header__list {
+  padding: 0 12px 0 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 247px;
+}
+.dropdown-language-header__list::-webkit-scrollbar {
+  width: 2px;
+}
+.dropdown-language-header__list::-webkit-scrollbar-track {
+  background: var(--BG-Bg_3, #2C2C28);
+}
+.dropdown-language-header__list::-webkit-scrollbar-thumb {
+  background: var(--Colors-Accent, #FFCF23);
+}
+@media (max-width: 768.98px) {
+  .dropdown-language-header__list {
+    max-height: 227px;
+  }
+}
+@media (max-width: 480.98px) {
+  .dropdown-language-header__list {
+    max-height: 207px;
+  }
+}
+.list-item-dropdown-language-header {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 16px 0 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.list-item-dropdown-language-header:first-child {
+  padding: 8px 0 16px 0;
+}
+.list-item-dropdown-language-header:last-child {
+  padding: 16px 0 8px 0;
+  border-bottom: 0;
+}
+@media (min-width: 1355.98px) {
+  .list-item-dropdown-language-header:hover .list-item-dropdown-language-header__text {
+    color: var(--Text-Txt_Main, #FFFFFF);
+  }
+}
+.list-item-dropdown-language-header.active .list-item-dropdown-language-header__text {
+  color: var(--Text-Txt_Main, #FFFFFF);
+}
+@media (max-width: 768.98px) {
+  .list-item-dropdown-language-header {
+    padding: 14px 0 14px 0;
+  }
+  .list-item-dropdown-language-header:first-child {
+    padding: 6px 0 14px 0;
+  }
+  .list-item-dropdown-language-header:last-child {
+    padding: 14px 0 6px 0;
+  }
+}
+@media (max-width: 480.98px) {
+  .list-item-dropdown-language-header {
+    padding: 12px 0 12px 0;
+  }
+  .list-item-dropdown-language-header:first-child {
+    padding: 4px 0 12px 0;
+  }
+  .list-item-dropdown-language-header:last-child {
+    padding: 12px 0 4px 0;
+  }
+}
+.list-item-dropdown-language-header__icon {
+  display: inline-flex;
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 10px 0 0;
+  position: relative;
+}
+.list-item-dropdown-language-header__icon img {
+  max-width: 100%;
+}
+.list-item-dropdown-language-header__icon::before {
+  position: absolute;
+  content: "";
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  background: url("../img/icons/flag-before.svg") top right no-repeat;
+  background-size: cover;
+  top: 2.93px;
+  left: 2.93px;
+}
+.list-item-dropdown-language-header__text {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 142.8571428571%;
+  color: var(--Text-Txt_Sec, rgba(255, 255, 255, 0.5019607843));
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (max-width: 768.98px) {
+  .list-item-dropdown-language-header__text {
+    font-size: 13px;
+  }
+}
+@media (max-width: 480.98px) {
+  .list-item-dropdown-language-header__text {
+    font-size: 14px;
+    line-height: 14.4px;
   }
 }
 
@@ -5403,6 +5727,1983 @@ h2 {
   height: 16px;
 }
 
+.simple-bonus {
+  flex: 1 1 100%;
+  padding: 90px 0 0 0;
+}
+@media (max-width: 650.98px) {
+  .simple-bonus {
+    padding: 122px 0 0 0;
+  }
+}
+.simple-bonus__breadcrumbs:not(:last-child) {
+  margin: 0 0 24px 0;
+}
+.simple-bonus__filter-tags:not(:last-child) {
+  margin: 0 0 40px 0;
+}
+@media (max-width: 768.98px) {
+  .simple-bonus__filter-tags:not(:last-child) {
+    margin: 0 0 24px 0;
+  }
+}
+.simple-bonus__essential-programs {
+  margin: 0 0 60px 0;
+}
+@media (max-width: 650.98px) {
+  .simple-bonus__essential-programs:not(:last-child) {
+    margin: 0 0 40px 0;
+  }
+}
+.simple-bonus__essential-programs .item-essential-programs-gamble__body:not(:last-child) {
+  margin: 0 0 40px 0;
+}
+.simple-bonus__casino-person:not(:last-child) {
+  margin: 0 0 60px 0;
+}
+@media (max-width: 650.98px) {
+  .simple-bonus__casino-person:not(:last-child) {
+    margin: 0 0 40px 0;
+  }
+}
+.simple-bonus__get-bonus:not(:last-child) {
+  margin: 0 0 40px 0;
+}
+.simple-bonus__casino-info:not(:last-child) {
+  margin: 0 0 20px 0;
+}
+.simple-bonus__deposits:not(:last-child) {
+  margin: 0 0 40px 0;
+}
+.simple-bonus__bonus-information:not(:last-child) {
+  margin: 0 0 28px 0;
+}
+@media (max-width: 650.98px) {
+  .simple-bonus__bonus-information:not(:last-child) {
+    margin: 0 0 32px 0;
+  }
+}
+
+.casino-person__body {
+  padding: 24px;
+  background: var(--BG-Bg_1, #171719);
+  border-radius: var(--SystemCorners-Medium, 12px);
+  overflow: hidden;
+  background: url("../img/menu-bg.jpg") center repeat;
+  position: relative;
+}
+.casino-person__body::before {
+  position: absolute;
+  content: "";
+  width: 669.65px;
+  height: 186.16px;
+  -moz-transform: rotate(-137.1deg);
+  -ms-transform: rotate(-137.1deg);
+  -webkit-transform: rotate(-137.1deg);
+  -o-transform: rotate(-137.1deg);
+  transform: rotate(-137.1deg);
+  background: radial-gradient(43.45% 46.62% at 50% 50%, rgba(255, 255, 255, 0.66) 0%, rgba(255, 255, 255, 0) 100%);
+  left: -215px;
+  top: -345px;
+  border-radius: 100%;
+  pointer-events: none;
+  filter: blur(200px);
+  -webkit-filter: blur(200px);
+}
+@media (max-width: 992.98px) {
+  .casino-person__body::before {
+    display: none;
+  }
+}
+.casino-person__body::after {
+  position: absolute;
+  content: "";
+  width: 162.77px;
+  height: 900.03px;
+  -moz-transform: rotate(-95.04deg);
+  -ms-transform: rotate(-95.04deg);
+  -webkit-transform: rotate(-95.04deg);
+  -o-transform: rotate(-95.04deg);
+  transform: rotate(-95.04deg);
+  background: radial-gradient(43.45% 46.62% at 50% 50%, rgba(255, 255, 255, 0.66) 0%, rgba(255, 255, 255, 0) 100%);
+  top: -160px;
+  right: 70px;
+  border-radius: 100%;
+  pointer-events: none;
+  filter: blur(168px);
+  -webkit-filter: blur(168px);
+}
+@media (max-width: 992.98px) {
+  .casino-person__body::after {
+    display: none;
+  }
+}
+@media (max-width: 992.98px) {
+  .casino-person__body {
+    background: url("../img/bg/09.jpg") center no-repeat;
+    background-size: cover;
+  }
+}
+.casino-person__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 992.98px) {
+  .casino-person__row {
+    flex-direction: column;
+    padding: 0 12px;
+  }
+}
+.casino-person__info {
+  margin: 0 50px;
+}
+@media (max-width: 1425.98px) {
+  .casino-person__info {
+    margin: 0 35px;
+  }
+}
+@media (max-width: 992.98px) {
+  .casino-person__info {
+    margin: 0 0 24px 0;
+  }
+}
+.casino-person__socials {
+  margin: 0 50px;
+}
+.casino-person__socials .socials-top-footer__item {
+  margin-bottom: 0;
+}
+.casino-person__socials .socials-top-footer__link {
+  flex: 0 0 50px;
+  width: 50px;
+  height: 50px;
+}
+@media (max-width: 992.98px) {
+  .casino-person__socials .socials-top-footer__link {
+    border-radius: 50%;
+    background: rgba(23, 23, 25, 0.5019607843);
+    border: 0;
+  }
+  .casino-person__socials .socials-top-footer__link svg {
+    fill: #fff;
+  }
+}
+@media (max-width: 1425.98px) {
+  .casino-person__socials {
+    margin: 0 35px;
+  }
+}
+@media (max-width: 992.98px) {
+  .casino-person__socials {
+    margin: 0;
+  }
+}
+@media (max-width: 992.98px) {
+  .casino-person__waves {
+    width: 321px;
+    height: 321px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 3px));
+  }
+  .casino-person__waves span {
+    position: absolute;
+    background: linear-gradient(180deg, #FFE278 0%, rgba(255, 255, 255, 0.2) 100%, rgba(255, 227, 125, 0.2) 100%);
+    border-radius: 50%;
+    overflow: auto;
+    opacity: 0.1;
+  }
+  .casino-person__waves span:nth-child(1) {
+    width: 100%;
+    height: 100%;
+  }
+  .casino-person__waves span:nth-child(2) {
+    width: 78.97%;
+    height: 78.97%;
+  }
+  .casino-person__waves span:nth-child(3) {
+    width: 56.29%;
+    height: 56.29%;
+  }
+}
+
+.info-casino-person {
+  display: flex;
+}
+@media (max-width: 992.98px) {
+  .info-casino-person {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+.info-casino-person__img {
+  flex: 0 0 95px;
+  width: 95px;
+  height: 95px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 24px 0 0;
+}
+.info-casino-person__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 992.98px) {
+  .info-casino-person__img {
+    border: 1px solid var(--Colors-Yellow, #FFCF23);
+    margin: 0 0 24px 0;
+  }
+}
+.info-casino-person__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.info-casino-person__name {
+  color: var(--Text-Txt_Main, #FFFFFF);
+}
+.info-casino-person__name:not(:last-child) {
+  margin: 0 0 3.12px 0;
+}
+@media (max-width: 992.98px) {
+  .info-casino-person__name:not(:last-child) {
+    margin: 0 0 12px 0;
+  }
+}
+.info-casino-person__position {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 133.3333333333%;
+  color: var(--Text-Txt_Sec, rgba(255, 255, 255, 0.5019607843));
+}
+@media (max-width: 650.98px) {
+  .info-casino-person__position {
+    font-size: 12px;
+    line-height: 14.4px;
+  }
+}
+
+@media (max-width: 768.98px) {
+  .get-bonus__container {
+    padding: 0;
+  }
+}
+.get-bonus__body {
+  position: relative;
+  padding: 32px 20px;
+  border-radius: var(--SystemCorners-Medium, 12px);
+  overflow: hidden;
+}
+@media (max-width: 768.98px) {
+  .get-bonus__body {
+    padding: 0;
+    border-radius: 0;
+  }
+}
+.get-bonus__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 768.98px) {
+  .get-bonus__bg {
+    display: none;
+  }
+}
+.get-bonus__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  margin: 0 -20px;
+}
+@media (max-width: 1355.98px) {
+  .get-bonus__row {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768.98px) {
+  .get-bonus__row {
+    margin: 0;
+  }
+}
+.get-bonus__main {
+  padding: 0 20px;
+}
+@media (max-width: 1355.98px) {
+  .get-bonus__main {
+    margin: 0 0 20px 0;
+    padding: 0;
+  }
+}
+.get-bonus__like {
+  padding: 0 20px;
+}
+@media (max-width: 1355.98px) {
+  .get-bonus__like {
+    padding: 0;
+  }
+}
+
+.main-get-bonus {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 768.98px) {
+  .main-get-bonus {
+    padding: 24px 16px 22px 16px;
+    background: #1E1E1E;
+    width: 100%;
+    justify-content: center;
+  }
+}
+.main-get-bonus__icon {
+  flex: 0 0 132px;
+  width: 132px;
+  height: 132px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--Text-Txt_Sec, rgba(255, 255, 255, 0.5019607843));
+  margin: 0 28px 0 0;
+}
+.main-get-bonus__icon svg {
+  width: 60px;
+  height: 60px;
+  fill: var(--Colors-Yellow, #FFCF23);
+}
+@media (max-width: 992.98px) {
+  .main-get-bonus__icon {
+    display: none;
+  }
+}
+.main-get-bonus__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 992.98px) {
+  .main-get-bonus__content {
+    align-items: center;
+  }
+}
+@media (max-width: 1355.98px) {
+  .main-get-bonus__content {
+    width: 100%;
+  }
+}
+.main-get-bonus__title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 32px;
+  color: var(--Text-Txt_Main, #FFFFFF);
+}
+.main-get-bonus__title:not(:last-child) {
+  margin: 0 0 16px 0;
+}
+@media (max-width: 768.98px) {
+  .main-get-bonus__title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+.main-get-bonus__text {
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--Text-Txt_Sec, rgba(255, 255, 255, 0.5019607843));
+}
+.main-get-bonus__text:not(:last-child) {
+  margin: 0 0 12px 0;
+}
+@media (max-width: 1355.98px) {
+  .main-get-bonus__text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .main-get-bonus__text:not(:last-child) {
+    margin: 0 0 24px 0;
+  }
+}
+.main-get-bonus__btns {
+  display: flex;
+  align-items: center;
+  margin: 0 -4px;
+}
+@media (max-width: 768.98px) {
+  .main-get-bonus__btns {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.main-get-bonus__btns-item {
+  padding: 0 4px;
+  margin: 8px 0 0 0;
+}
+@media (max-width: 768.98px) {
+  .main-get-bonus__btns-item {
+    width: 100%;
+    margin: 0;
+  }
+  .main-get-bonus__btns-item:not(:last-child) {
+    margin: 0 0 12px 0;
+  }
+}
+.main-get-bonus__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  white-space: nowrap;
+}
+.main-get-bonus__btn_bonus {
+  width: 240px;
+  height: 42px;
+  border-radius: var(--SystemCorners-Small, 8px);
+  overflow: hidden;
+  background: var(--Colors-Accent, #FFCF23);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  color: var(--Text-Txt_Dark, #020202);
+}
+.main-get-bonus__btn_bonus span {
+  display: flex;
+  align-items: center;
+  margin: 0 8px 0 0;
+}
+.main-get-bonus__btn_bonus span img {
+  width: 20px;
+  height: 20px;
+}
+.main-get-bonus__btn_bonus:active {
+  background: #BF9B1A;
+}
+@media (min-width: 1355.98px) {
+  .main-get-bonus__btn_bonus:hover {
+    background: #fde075;
+  }
+}
+@media (max-width: 768.98px) {
+  .main-get-bonus__btn_bonus {
+    width: 100%;
+    height: 44px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.main-get-bonus__btn_review {
+  width: 240px;
+  height: 42px;
+  background: rgba(35, 35, 32, 0.5019607843);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  color: var(--Text-Txt_Main, #FFFFFF);
+  border-radius: var(--SystemCorners-Small, 8px);
+  overflow: hidden;
+}
+.main-get-bonus__btn_review span {
+  display: flex;
+  align-items: center;
+  margin: 0 8px 0 0;
+}
+.main-get-bonus__btn_review span svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--Colors-Yellow, #FFCF23);
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (min-width: 1355.98px) {
+  .main-get-bonus__btn_review:hover {
+    background: var(--Colors-Yellow, #FFCF23);
+    color: var(--Text-Txt_Dark, #020202);
+  }
+  .main-get-bonus__btn_review:hover svg {
+    fill: var(--Text-Txt_Dark, #020202);
+  }
+}
+@media (max-width: 768.98px) {
+  .main-get-bonus__btn_review {
+    width: 100%;
+    height: 44px;
+    font-size: 14px;
+    line-height: 20px;
+    background: var(--BG-Bg_3, #2C2C28);
+  }
+}
+.main-get-bonus__btn_apply {
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--Text-Txt_Main, #FFFFFF);
+  margin: 0 0 0 16px;
+}
+@media (min-width: 1355.98px) {
+  .main-get-bonus__btn_apply:hover {
+    color: var(--Text-Txt_Sec, rgba(255, 255, 255, 0.5019607843));
+  }
+}
+@media (max-width: 768.98px) {
+  .main-get-bonus__btn_apply {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14.4px;
+    color: var(--Text-Txt_Sec, rgba(255, 255, 255, 0.5019607843));
+    margin: 0;
+  }
+}
+
+.like-get-bonus {
+  width: 100%;
+  max-width: 600px;
+}
+.like-get-bonus__body {
+  padding: 20px;
+  width: 100%;
+  border-radius: var(--SystemCorners-Medium, 12px);
+  background: rgba(35, 35, 32, 0.5019607843);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+@media (max-width: 768.98px) {
+  .like-get-bonus__body {
+    padding: 0 16px;
+    border-radius: 0;
+    background: transparent;
+  }
+}
+.like-get-bonus__title {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 32px;
+  color: var(--Text-Txt_Main, #FFFFFF);
+}
+.like-get-bonus__title:not(:last-child) {
+  margin: 0 0 18px 0;
+}
+@media (max-width: 768.98px) {
+  .like-get-bonus__title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  .like-get-bonus__title:not(:last-child) {
+    margin: 0 0 12px 0;
+  }
+}
+.like-get-bonus__btns {
+  width: 100%;
+  margin: 0 -4px;
+  display: flex;
+}
+@media (max-width: 768.98px) {
+  .like-get-bonus__btns {
+    margin: 0;
+  }
+}
+.like-get-bonus__btns-item {
+  padding: 0 4px;
+  flex: 0 0 50%;
+}
+@media (max-width: 768.98px) {
+  .like-get-bonus__btns-item {
+    padding: 0;
+  }
+}
+.like-get-bonus__btns-item:first-child {
+  padding: 0 4px 0 0;
+}
+.like-get-bonus__btns-item:last-child {
+  padding: 0 0 0 4px;
+}
+.like-get-bonus__btn {
+  width: 100%;
+  height: 42px;
+  border-radius: var(--SystemCorners-Small, 8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 1355.98px) {
+  .like-get-bonus__btn:hover {
+    background-color: var(--Colors-Yellow, #FFCF23);
+  }
+  .like-get-bonus__btn:hover .like-get-bonus__btn-icon svg {
+    fill: var(--Text-Txt_Dark, #020202);
+  }
+  .like-get-bonus__btn:hover .like-get-bonus__btn-number {
+    color: var(--Text-Txt_Dark, #020202);
+  }
+}
+@media (max-width: 768.98px) {
+  .like-get-bonus__btn {
+    height: 44px;
+  }
+}
+.like-get-bonus__btn_dislike .like-get-bonus__btn-icon svg {
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.like-get-bonus__btn-icon {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  margin: 0 4px;
+}
+.like-get-bonus__btn-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--Text-Txt_Sec, rgba(255, 255, 255, 0.5019607843));
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.like-get-bonus__btn-number {
+  margin: 0 4px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 22px;
+  color: var(--Text-Txt_Main, #FFFFFF);
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+@media (max-width: 992.98px) {
+  .casino-info__body {
+    border-radius: 6.8px;
+    overflow: hidden;
+    background: url("../img/menu-bg.jpg") center repeat;
+  }
+}
+.casino-info__row {
+  display: flex;
+}
+@media (max-width: 1460px) {
+  .casino-info__row {
+    flex-direction: column;
+  }
+}
+.casino-info__main {
+  margin: 0 20px 0 0;
+}
+@media (max-width: 1460px) {
+  .casino-info__main {
+    margin: 0 0 20px 0;
+  }
+}
+@media (max-width: 992.98px) {
+  .casino-info__main {
+    margin: 0 0 24px 0;
+  }
+}
+.main-casino-info {
+  flex: 0 0 433px;
+  min-height: 290px;
+  padding: 20px;
+  border-radius: var(--SystemCorners-Medium, 12px);
+  overflow: hidden;
+  position: relative;
+  background: url("../img/menu-bg.jpg") center repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+@media (max-width: 1460px) {
+  .main-casino-info {
+    flex: auto;
+    min-height: 435px;
+  }
+}
+@media (max-width: 1355.98px) {
+  .main-casino-info {
+    min-height: 400px;
+  }
+}
+@media (max-width: 992.98px) {
+  .main-casino-info {
+    background: transparent;
+    padding: 34.98% 12px 0 12px;
+    min-height: 0;
+  }
+}
+@media (max-width: 380px) {
+  .main-casino-info {
+    padding: 120px 12px 0 12px;
+  }
+}
+.main-casino-info__image-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 67.21%;
+  border-radius: 6.8px;
+  overflow: hidden;
+}
+.main-casino-info__image-block::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.1490196078);
+  z-index: 1;
+  pointer-events: none;
+}
+@media (max-width: 1460px) {
+  .main-casino-info__image-block {
+    height: 78%;
+  }
+}
+@media (max-width: 992.98px) {
+  .main-casino-info__image-block {
+    height: calc(100% - 108px);
+  }
+}
+@media (max-width: 380px) {
+  .main-casino-info__image-block {
+    height: 150px;
+  }
+}
+.main-casino-info__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.name-main-casino-info {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+}
+@media (max-width: 992.98px) {
+  .name-main-casino-info {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.name-main-casino-info__logo {
+  flex: 0 0 120px;
+  width: 120px;
+  height: 120px;
+  border-radius: 10.29px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 20px 0 0;
+}
+.name-main-casino-info__logo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 992.98px) {
+  .name-main-casino-info__logo {
+    flex: 0 0 100px;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    margin: 0 0 12px 0;
+  }
+}
+.name-main-casino-info__content {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 992.98px) {
+  .name-main-casino-info__content {
+    flex: 1 1 100%;
+  }
+}
+.name-main-casino-info__title {
+  flex: 1 1 100%;
+  margin: 0 0 8px 0;
+  color: var(--Text-Txt_Main, #FFFFFF);
+}
+@media (max-width: 992.98px) {
+  .name-main-casino-info__title {
+    text-align: center;
+    margin: 0;
+  }
+}
+.name-main-casino-info .info-casino-card__stake-rating {
+  margin: 0 12px 0 0;
+}
+@media (max-width: 992.98px) {
+  .name-main-casino-info .info-casino-card__stake-rating {
+    padding: 42px 0 0 0;
+    margin: 0;
+  }
+}
+.name-main-casino-info .info-casino-card__stake-rating-icon {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+}
+@media (max-width: 650.98px) {
+  .name-main-casino-info .info-casino-card__stake-rating-icon {
+    flex: 0 0 14px;
+    width: 14px;
+    height: 14px;
+    margin: -0.5px 4px 0px 0;
+  }
+}
+.name-main-casino-info .info-casino-card__stake__rating-number {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--Text-Txt_Main, #FFFFFF);
+}
+@media (max-width: 650.98px) {
+  .name-main-casino-info .info-casino-card__stake__rating-number {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14.4px;
+  }
+}
+@media (max-width: 992.98px) {
+  .name-main-casino-info .info-casino-card__likes {
+    padding: 42px 0 0 0;
+  }
+}
+.name-main-casino-info .info-casino-card__likes-icon {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+.name-main-casino-info .info-casino-card__likes-icon img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 650.98px) {
+  .name-main-casino-info .info-casino-card__likes-icon {
+    flex: 0 0 12px;
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+  }
+}
+.name-main-casino-info .info-casino-card__likes-number {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+@media (max-width: 650.98px) {
+  .name-main-casino-info .info-casino-card__likes-number {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14.4px;
+  }
+}
+
+.content-casino-info {
+  flex: 1 1 100%;
+  padding: 20px 20px 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: var(--SystemCorners-Medium, 12px);
+  background: url("../img/menu-bg.jpg") center repeat;
+  min-height: 290px;
+}
+@media (max-width: 992px) {
+  .content-casino-info {
+    flex-direction: column;
+    background: transparent;
+    border-radius: 0;
+    padding: 0 12px 4px 12px;
+  }
+}
+.content-casino-info__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 20px 0 0;
+}
+@media (max-width: 992.98px) {
+  .content-casino-info__main {
+    padding: 0;
+  }
+  .content-casino-info__main:not(:last-child) {
+    margin: 0 0 16px 0;
+  }
+}
+.content-casino-info__top:not(:last-child) {
+  margin: 0 0 16px 0;
+}
+@media (max-width: 992.98px) {
+  .content-casino-info__top {
+    order: 1;
+  }
+  .content-casino-info__top:not(:last-child) {
+    margin: 0 0 24px 0;
+  }
+}
+.content-casino-info__title {
+  color: var(--Text-Txt_Main, #FFFFFF);
+}
+.content-casino-info__title:not(:last-child) {
+  margin: 0 0 8px 0;
+}
+@media (max-width: 992.98px) {
+  .content-casino-info__title {
+    text-align: center;
+  }
+  .content-casino-info__title:not(:last-child) {
+    margin: 0 0 12px 0;
+  }
+}
+@media (max-width: 650.98px) {
+  .content-casino-info__title {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+.content-casino-info__subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--Text-Txt_Sec, rgba(255, 255, 255, 0.5019607843));
+}
+@media (max-width: 992.98px) {
+  .content-casino-info__subtitle {
+    text-align: center;
+  }
+}
+@media (max-width: 650.98px) {
+  .content-casino-info__subtitle {
+    font-size: 12px;
+    line-height: 14.4px;
+  }
+}
+.content-casino-info__country:not(:last-child) {
+  margin: 0 0 16px 0;
+}
+@media (max-width: 992.98px) {
+  .content-casino-info__country {
+    order: 3;
+    margin: 12px 0 24px 0;
+  }
+  .content-casino-info__country:not(:last-child) {
+    margin: 12px 0 24px 0;
+  }
+}
+.content-casino-info .main-get-bonus__btn_bonus {
+  width: 360px;
+  height: 56px;
+  margin: 0 0 8px 0;
+}
+@media (max-width: 992.98px) {
+  .content-casino-info .main-get-bonus__btn_bonus {
+    margin: 0 auto;
+    order: 2;
+  }
+}
+@media (max-width: 650.98px) {
+  .content-casino-info .main-get-bonus__btn_bonus {
+    height: 44px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+  }
+}
+@media (max-width: 480.98px) {
+  .content-casino-info .main-get-bonus__btn_bonus {
+    width: 100%;
+  }
+}
+@media (max-width: 992.98px) {
+  .content-casino-info .tags-casino-card {
+    order: 4;
+  }
+}
+
+.country-content-casino-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media (max-width: 992.98px) {
+  .country-content-casino-info {
+    width: 100%;
+    align-items: center;
+  }
+}
+.country-content-casino-info__info {
+  display: flex;
+  align-items: center;
+  margin: 0 0 8px 0;
+}
+@media (max-width: 992.98px) {
+  .country-content-casino-info__info {
+    order: 2;
+  }
+}
+.country-content-casino-info__icon {
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 8.01px 0 0;
+}
+.country-content-casino-info__icon::before {
+  position: absolute;
+  content: "";
+  flex: 0 0 17.07px;
+  width: 17.07px;
+  height: 17.07px;
+  background: url("../img/icons/flag-before.svg") top right no-repeat;
+  background-size: cover;
+  top: 2.93px;
+  left: 2.94px;
+}
+.country-content-casino-info__icon img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 650.98px) {
+  .country-content-casino-info__icon {
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+    margin: 0 8px 0 0;
+  }
+  .country-content-casino-info__icon::before {
+    flex: 0 0 13.66px;
+    width: 13.66px;
+    height: 13.66px;
+    top: 2.34px;
+    left: 2.35px;
+  }
+}
+.country-content-casino-info__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--Text-Txt_Main, #FFFFFF);
+}
+@media (max-width: 650.98px) {
+  .country-content-casino-info__text {
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 16px;
+  }
+}
+.country-content-casino-info .main-get-bonus__btn_apply {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--Text-Txt_Sec, rgba(255, 255, 255, 0.5019607843));
+}
+@media (min-width: 1355.98px) {
+  .country-content-casino-info .main-get-bonus__btn_apply:hover {
+    color: var(--Text-Txt_Main, #FFFFFF);
+  }
+}
+@media (max-width: 992.98px) {
+  .country-content-casino-info .main-get-bonus__btn_apply {
+    order: 1;
+    margin: 0 0 24px 0;
+  }
+}
+@media (max-width: 650.98px) {
+  .country-content-casino-info .main-get-bonus__btn_apply {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14.4px;
+  }
+}
+
+.features-content-casino-info {
+  flex: 0 0 420px;
+}
+@media (max-width: 992.98px) {
+  .features-content-casino-info {
+    flex: auto;
+  }
+}
+.features-content-casino-info__row {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -4px;
+}
+.features-content-casino-info__column {
+  flex: 0 1 50%;
+  padding: 0 4px;
+  margin: 0 0 8px 0;
+}
+.item-features-content-casino-info {
+  padding: 16.5px 20px;
+  overflow: hidden;
+  background: var(--BG-Bg_2, #232320);
+  border-radius: var(--SystemCorners-Small, 8px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 992.98px) {
+  .item-features-content-casino-info {
+    padding: 8px 12px;
+  }
+}
+.item-features-content-casino-info__top:not(:last-child) {
+  margin: 0 0 20px 0;
+}
+@media (max-width: 992.98px) {
+  .item-features-content-casino-info__top:not(:last-child) {
+    margin: 0 0 4px 0;
+  }
+}
+.item-features-content-casino-info__label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--Text-Txt_Main, #FFFFFF);
+}
+@media (max-width: 650.98px) {
+  .item-features-content-casino-info__label {
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 16px;
+  }
+}
+.item-features-content-casino-info__number {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--Text-Txt_Main, #FFFFFF);
+}
+@media (max-width: 650.98px) {
+  .item-features-content-casino-info__number {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+}
+.item-features-content-casino-info__rating {
+  display: flex;
+  align-items: center;
+  padding: 4px 0 2px 0;
+}
+@media (max-width: 992.98px) {
+  .item-features-content-casino-info__rating {
+    padding: 2px 0;
+  }
+}
+.item-features-content-casino-info__star {
+  flex: 0 0 12px;
+  width: 12px;
+  height: 12px;
+}
+.item-features-content-casino-info__star:not(:last-child) {
+  margin: 0 1px 0 0;
+}
+.item-features-content-casino-info__star img {
+  width: 100%;
+  height: 100%;
+}
+.item-features-content-casino-info__value {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 17.76px;
+  color: var(--Text-Txt_Sec, rgba(255, 255, 255, 0.5019607843));
+}
+@media (max-width: 650.98px) {
+  .item-features-content-casino-info__value {
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 16px;
+  }
+}
+
+.deposits__block {
+  border-radius: var(--SystemCorners-Medium, 12px);
+  overflow: hidden;
+  background: url("../img/menu-bg.jpg") center repeat;
+  padding: 20px 20px 8px 20px;
+}
+.deposits__block:not(:last-child) {
+  margin: 0 0 20px 0;
+}
+@media (max-width: 650.98px) {
+  .deposits__block {
+    padding: 12px 12px 4px 12px;
+  }
+}
+.deposits__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -6px;
+}
+.deposits__column {
+  margin: 0 0 12px 0;
+  padding: 0 6px;
+}
+.deposits__column_big {
+  flex: 0 1 50%;
+}
+@media (max-width: 850px) {
+  .deposits__column_big {
+    flex: 1 1 100%;
+  }
+}
+.deposits__column_medium {
+  flex: 0 1 33.333%;
+}
+@media (max-width: 1100px) {
+  .deposits__column_medium {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 850px) {
+  .deposits__column_medium {
+    flex: 1 1 100%;
+  }
+}
+.deposits__column_small {
+  flex: 0 1 25%;
+}
+@media (max-width: 1400px) {
+  .deposits__column_small {
+    flex: 0 1 33.333%;
+  }
+}
+@media (max-width: 1100px) {
+  .deposits__column_small {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 850px) {
+  .deposits__column_small {
+    flex: 1 1 100%;
+  }
+}
+.item-deposits {
+  padding: 12px;
+  border-radius: var(--SystemCorners-Small, 8px);
+  background: var(--BG-Bg_2, #232320);
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 650.98px) {
+  .item-deposits {
+    padding: 8px;
+  }
+}
+.item-deposits_grass .icon-item-deposits {
+  border: 1px solid var(--Colors-Grass_Transp, rgba(172, 229, 78, 0.1607843137));
+}
+.item-deposits_grass .icon-item-deposits__img svg {
+  fill: var(--Colors-Grass, #ACE54E);
+}
+.item-deposits_grass .icon-item-deposits__number-border {
+  border: 1px solid var(--Colors-Grass, #ACE54E);
+}
+.item-deposits_ocean .icon-item-deposits {
+  border: 1px solid var(--Colors-Ocean_Transp, rgba(131, 209, 252, 0.1607843137));
+}
+.item-deposits_ocean .icon-item-deposits__img svg {
+  fill: var(--Colors-Ocean, #83D1FC);
+}
+.item-deposits_ocean .icon-item-deposits__number-border {
+  border: 1px solid var(--Colors-Ocean, #83D1FC);
+}
+.item-deposits_purple .icon-item-deposits {
+  border: 1px solid var(--Colors-Purple_Transp, rgba(173, 123, 255, 0.1607843137));
+}
+.item-deposits_purple .icon-item-deposits__img svg {
+  fill: var(--Colors-Purple, #AD7BFF);
+}
+.item-deposits_purple .icon-item-deposits__number-border {
+  border: 1px solid var(--Colors-Purple, #AD7BFF);
+}
+.item-deposits_green .icon-item-deposits {
+  border: 1px solid var(--Colors-Green_Transp, rgba(118, 219, 161, 0.1607843137));
+}
+.item-deposits_green .icon-item-deposits__img svg {
+  fill: var(--Colors-Green, #76DBA1);
+}
+.item-deposits_green .icon-item-deposits__number-border {
+  border: 1px solid var(--Colors-Green, #76DBA1);
+}
+.item-deposits_orange .icon-item-deposits {
+  border: 1px solid var(--Colors-Orange_Transp, rgba(249, 107, 47, 0.1607843137));
+}
+.item-deposits_orange .icon-item-deposits__img svg {
+  fill: var(--Colors-Orange, #F96B2F);
+}
+.item-deposits_orange .icon-item-deposits__number-border {
+  border: 1px solid var(--Colors-Orange, #F96B2F);
+}
+.item-deposits__icon {
+  margin: 0 12px 0 0;
+}
+@media (max-width: 650.98px) {
+  .item-deposits__icon {
+    margin: 0 8px 0 0;
+  }
+}
+.icon-item-deposits {
+  flex: 0 0 80px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--SystemCorners-ExtraSmall, 6px);
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 650.98px) {
+  .icon-item-deposits {
+    flex: 0 0 60px;
+    width: 60px;
+    height: 60px;
+  }
+}
+.icon-item-deposits__img svg {
+  width: 36px;
+  height: 36px;
+}
+@media (max-width: 650.98px) {
+  .icon-item-deposits__img svg {
+    width: 27px;
+    height: 27px;
+  }
+}
+.icon-item-deposits__number {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 9.75px;
+  right: 8.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--BG-Bg_2, #232320);
+  border-radius: 50%;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24.75px;
+  color: var(--Text-Txt_Main, #FFFFFF);
+}
+@media (max-width: 650.98px) {
+  .icon-item-deposits__number {
+    width: 22.5px;
+    height: 22.5px;
+    bottom: 7.5px;
+    right: 6px;
+    font-size: 12px;
+    line-height: 18.56px;
+  }
+}
+.icon-item-deposits__number-border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.icon-item-deposits__number-border span {
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 650.98px) {
+  .icon-item-deposits__number-border {
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.info-item-deposits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.info-item-deposits__label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--Text-Txt_Main, #FFFFFF);
+}
+.info-item-deposits__label:not(:last-child) {
+  margin: 0 0 4px 0;
+}
+@media (max-width: 650.98px) {
+  .info-item-deposits__label {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .info-item-deposits__label:not(:last-child) {
+    margin: 0 0 0px 0;
+  }
+}
+.info-item-deposits__value {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--Colors-Yellow, #FFCF23);
+}
+@media (max-width: 650.98px) {
+  .info-item-deposits__value {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.bonus-information__top:not(:last-child) {
+  margin: 0 0 24px 0;
+}
+@media (max-width: 650.98px) {
+  .bonus-information__top:not(:last-child) {
+    margin: 0 0 20px 0;
+  }
+}
+.bonus-information__row {
+  display: flex;
+  margin: 0 -10px;
+}
+@media (max-width: 1355.98px) {
+  .bonus-information__row {
+    flex-direction: column;
+  }
+}
+.bonus-information__column {
+  flex: 0 1 50%;
+  padding: 0 10px;
+}
+.bonus-information__item {
+  margin: 0 0 12px 0;
+}
+@media (max-width: 650.98px) {
+  .bonus-information__item {
+    margin: 0 0 8px 0;
+  }
+}
+
+.top-bonus-information__row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+@media (max-width: 650.98px) {
+  .top-bonus-information__row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.top-bonus-information__title {
+  margin: 0 20px 0 0;
+  color: var(--Text-Txt_Main, #FFFFFF);
+}
+@media (max-width: 650.98px) {
+  .top-bonus-information__title {
+    margin: 0 0 4px 0;
+  }
+}
+.update-top-bonus-information {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--Text-Txt_Sec, rgba(255, 255, 255, 0.5019607843));
+}
+@media (max-width: 650.98px) {
+  .update-top-bonus-information {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14.4px;
+  }
+}
+.update-top-bonus-information__label {
+  margin: 0 3px 0 0;
+}
+.item-bonus-information {
+  border-radius: var(--SystemCorners-Small, 8px);
+  padding: 20px 20px 0 20px;
+  background: var(--BG-Bg_1, #171719);
+}
+@media (max-width: 650.98px) {
+  .item-bonus-information {
+    padding: 12px 12px 0 12px;
+  }
+}
+@media (max-width: 768.98px) {
+  .item-bonus-information_restrictions .item-content-bonus-information {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 768.98px) {
+  .item-bonus-information_restrictions .item-content-bonus-information__label {
+    margin: 0 0 4px 0;
+  }
+}
+@media (max-width: 768.98px) {
+  .item-bonus-information_restrictions .item-content-bonus-information__value {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.item-bonus-information__content {
+  display: none;
+  padding: 0 0 20px 0;
+}
+@media (max-width: 650.98px) {
+  .item-bonus-information__content {
+    padding: 0 0 12px 0;
+  }
+}
+
+.top-item-bonus-information {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0 0 20px 0;
+}
+@media (max-width: 650.98px) {
+  .top-item-bonus-information {
+    padding: 0 0 12px 0;
+  }
+}
+.top-item-bonus-information.active .top-item-bonus-information__icon img {
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.top-item-bonus-information__title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--Text-Txt_Main, #FFFFFF);
+  margin: 0 20px 0 0;
+}
+@media (max-width: 650.98px) {
+  .top-item-bonus-information__title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+}
+.top-item-bonus-information__icon {
+  display: flex;
+  align-items: center;
+}
+.top-item-bonus-information__icon img {
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  width: 6px;
+  height: 10px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.content-bonus-information__item:not(:last-child) {
+  margin: 0 0 4px 0;
+}
+
+.item-content-bonus-information {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  background: var(--BG-Bg_4, #1C1C1C);
+  border-radius: var(--SystemCorners-ExtraSmall, 6px);
+}
+@media (max-width: 650.98px) {
+  .item-content-bonus-information {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+.item-content-bonus-information__label {
+  display: flex;
+  align-items: center;
+  color: var(--Text-Txt_Sec, rgba(255, 255, 255, 0.5019607843));
+  margin: 0 20px 0 0;
+  white-space: nowrap;
+}
+.item-content-bonus-information__value {
+  flex: 1 1 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--Text-Txt_Main, #FFFFFF);
+  position: relative;
+}
+.item-content-bonus-information__info {
+  margin: 0 0 0 4px;
+  position: relative;
+}
+.item-content-bonus-information__info:hover .item-content-bonus-information__info-text {
+  opacity: 1;
+  visibility: visible;
+}
+.item-content-bonus-information__info-icon {
+  cursor: pointer;
+}
+.item-content-bonus-information__info-text {
+  position: absolute;
+  padding: 10px 12px 12px 12px;
+  border-radius: var(--SystemCorners-Small, 8px);
+  background: var(--BG-Bg_3, #2C2C28);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2509803922);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 17.76px;
+  color: var(--Text-Txt_Sec, rgba(255, 255, 255, 0.5019607843));
+  white-space: nowrap;
+  bottom: 0;
+  transform: translate(-21px, -29px);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.item-content-bonus-information__info-text span {
+  color: var(--Text-Txt_Main, #FFFFFF);
+}
+.item-content-bonus-information__info-text::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 9px;
+  border-left-width: 9px;
+  border-top: 9px solid var(--BG-Bg_3, #2C2C28);
+  left: 20px;
+  bottom: -8px;
+}
+@media (max-width: 650.98px) {
+  .item-content-bonus-information__info-text {
+    font-size: 11px;
+    line-height: 16px;
+    padding: 6px 8px 8px 8px;
+  }
+}
+.item-content-bonus-information__link {
+  display: flex;
+  align-items: center;
+  padding: 0 12px 0 0;
+  color: var(--Colors-Yellow, #FFCF23);
+  position: relative;
+  margin: 0 0 0 10px;
+}
+.item-content-bonus-information__link::before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 8px;
+  right: 0;
+  background: url("../img/icons/arrow-yellow.svg") center no-repeat;
+  background-size: contain;
+}
+@media (max-width: 650.98px) {
+  .item-content-bonus-information__link {
+    padding: 0 10px 0 0;
+  }
+}
+.item-content-bonus-information__text {
+  padding: 4px 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--Text-Txt_Sec, rgba(255, 255, 255, 0.5019607843));
+}
+.item-content-bonus-information__text span {
+  color: var(--Icons-Icons_Main, #FFFFFF);
+}
+.item-content-bonus-information__text p:not(:last-child) {
+  margin: 0 0 20px 0;
+}
+@media (max-width: 650.98px) {
+  .item-content-bonus-information__text p:not(:last-child) {
+    margin: 0 0 10px 0;
+  }
+}
+@media (max-width: 650.98px) {
+  .item-content-bonus-information__text {
+    font-size: 12px;
+    line-height: 14.4px;
+  }
+}
+.status-item-content-bonus-information {
+  display: flex;
+  align-items: center;
+}
+.status-item-content-bonus-information_low .status-item-content-bonus-information__label {
+  color: var(--Colors-Orange, #F96B2F);
+}
+.status-item-content-bonus-information_low .status-item-content-bonus-information__panel::before {
+  background: var(--Colors-Orange, #F96B2F);
+  width: 33.333%;
+}
+.status-item-content-bonus-information_medium .status-item-content-bonus-information__label {
+  color: var(--Colors-Yellow, #FFCF23);
+}
+.status-item-content-bonus-information_medium .status-item-content-bonus-information__panel::before {
+  background: var(--Colors-Yellow, #FFCF23);
+  width: 66.667%;
+}
+.status-item-content-bonus-information_quick .status-item-content-bonus-information__label {
+  color: var(--Colors-Green, #76DBA1);
+}
+.status-item-content-bonus-information_quick .status-item-content-bonus-information__panel::before {
+  background: var(--Colors-Green, #76DBA1);
+  width: 100%;
+}
+.status-item-content-bonus-information__label {
+  margin: 0 8px 0 0;
+}
+.status-item-content-bonus-information__panel {
+  flex: 0 0 100px;
+  width: 100px;
+  height: 8px;
+  border-radius: var(--SystemCorners-Round, 100px);
+  overflow: hidden;
+  background: var(--BG-Bg_3, #2C2C28);
+  position: relative;
+}
+.status-item-content-bonus-information__panel::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.popup-item-content-bonus-information {
+  position: absolute;
+  padding: 20px 20px 8px 20px;
+  border-radius: var(--SystemCorners-Small, 8px);
+  background: var(--BG-Bg_3, #2C2C28);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2509803922);
+  right: 0;
+  bottom: 0;
+  transform: translate(-8px, -32.29px);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.popup-item-content-bonus-information::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 9px;
+  border-left-width: 9px;
+  border-top: 9px solid var(--BG-Bg_3, #2C2C28);
+  right: 39px;
+  bottom: -8px;
+}
+.popup-item-content-bonus-information.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+@media (max-width: 650.98px) {
+  .popup-item-content-bonus-information {
+    padding: 16px 16px 4px 16px;
+    transform: translate(24px, -27.29px);
+  }
+}
+.popup-item-content-bonus-information__top {
+  margin: 0 0 20px 0;
+}
+@media (max-width: 650.98px) {
+  .popup-item-content-bonus-information__top {
+    margin: 0 0 12px 0;
+  }
+}
+.popup-item-content-bonus-information__row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+}
+@media (max-width: 650.98px) {
+  .popup-item-content-bonus-information__row {
+    margin: 0 -12px;
+  }
+}
+.popup-item-content-bonus-information__column {
+  padding: 0 20px;
+}
+@media (max-width: 650.98px) {
+  .popup-item-content-bonus-information__column {
+    padding: 0 12px;
+  }
+}
+.popup-item-content-bonus-information__game {
+  margin: 0 0 16px 0;
+}
+
+.top-popup-item-content-bonus-information {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+@media (max-width: 650.98px) {
+  .top-popup-item-content-bonus-information {
+    padding: 0 0 15.86px 0;
+  }
+}
+.top-popup-item-content-bonus-information__title {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--Text-Txt_Main, #FFFFFF);
+  margin: 0 20px 0 0;
+}
+@media (max-width: 650.98px) {
+  .top-popup-item-content-bonus-information__title {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+.top-popup-item-content-bonus-information__number {
+  color: var(--Text-Txt_Sec, rgba(255, 255, 255, 0.5019607843));
+}
+.top-popup-item-content-bonus-information__btn-close {
+  flex: 0 0 29.71px;
+  width: 29.71px;
+  height: 29.71px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 6.1px;
+  overflow: hidden;
+  background: var(--BG-Bg_2, #232320);
+}
+.top-popup-item-content-bonus-information__btn-close img {
+  width: 12.25px;
+  height: 12.25px;
+}
+
+.game-popup-item-content-bonus-information {
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 1355.98px) {
+  .game-popup-item-content-bonus-information:hover .game-popup-item-content-bonus-information__name {
+    color: var(--Text-Txt_Main, #FFFFFF);
+  }
+}
+.game-popup-item-content-bonus-information__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 16px;
+  margin: 0 10px 0 0;
+}
+.game-popup-item-content-bonus-information__name {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--Text-Txt_Sec, rgba(255, 255, 255, 0.5019607843));
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  white-space: nowrap;
+}
+@media (max-width: 650.98px) {
+  .game-popup-item-content-bonus-information__name {
+    font-size: 12px;
+    line-height: 14.4px;
+  }
+}
+
 .gamble__body {
   position: relative;
   width: 100%;
@@ -6037,6 +8338,56 @@ h2 {
 }
 .main-gamble.resize .main-gamble__different-casino-bg .swiper-slide {
   width: 177.78px;
+}
+@media (max-width: 1650.98px) {
+  .main-gamble.resize .get-bonus .get-bonus__row {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1650.98px) {
+  .main-gamble.resize .get-bonus .get-bonus__main {
+    margin: 0 0 20px 0;
+  }
+}
+@media (max-width: 1750px) {
+  .main-gamble.resize .casino-info .features-content-casino-info {
+    flex: 0 0 210px;
+  }
+}
+@media (max-width: 1460px) {
+  .main-gamble.resize .casino-info .features-content-casino-info {
+    flex: 0 0 420px;
+  }
+}
+@media (max-width: 1750px) {
+  .main-gamble.resize .casino-info .features-content-casino-info__column {
+    flex: 1 1 100%;
+  }
+}
+@media (max-width: 1460px) {
+  .main-gamble.resize .casino-info .features-content-casino-info__column {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 1700px) {
+  .main-gamble.resize .deposits .deposits__column_small {
+    flex: 0 1 33.333%;
+  }
+}
+@media (max-width: 1100px) {
+  .main-gamble.resize .deposits .deposits__column_small {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 850px) {
+  .main-gamble.resize .deposits .deposits__column_small {
+    flex: 1 1 100%;
+  }
+}
+@media (max-width: 1650.98px) {
+  .main-gamble.resize .bonus-information .bonus-information__row {
+    flex-direction: column;
+  }
 }
 .main-gamble__body {
   width: 100%;
