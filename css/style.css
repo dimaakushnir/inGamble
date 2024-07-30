@@ -3811,6 +3811,11 @@ h3 {
   filter: blur(267px);
   -webkit-filter: blur(267px);
 }
+@media (max-width: 1355.98px) {
+  .mobile-header__body .menu-header {
+    display: block;
+  }
+}
 @media (max-width: 768.98px) {
   .mobile-header__body {
     height: 100%;
@@ -3825,6 +3830,7 @@ h3 {
 @media (max-width: 1355.98px) {
   .menu-header {
     width: 100%;
+    display: none;
   }
 }
 .menu-header__list {
