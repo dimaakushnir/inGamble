@@ -479,3 +479,60 @@ if (sidebar_title_icons) {
         })
     })
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    $(document).ready(function () {
+
+        if (document.querySelector('.filter-tags-gamble__swiper')) {
+            // Filter Tags
+            const swiperFilterTags = new Swiper('.filter-tags-gamble__swiper', {
+                // Optional parameters
+                slidesPerView: "auto",
+                allowTouchMove: true,
+                spaceBetween: 8,
+
+                breakpoints: {
+                    // when window width is >= 320px
+                    320: {
+                        spaceBetween: 4,
+                    },
+                    // when window width is >= 320px
+                    480.98: {
+                        spaceBetween: 8,
+                    },
+                    // when window width is >= 640px
+                    1920: {
+                        spaceBetween: 8,
+                    }
+                }
+            });
+        }
+
+        if (document.querySelector('.essential-programs-gamble__swiper')) {
+            // Essential Programs Gamble Slider
+            const swiperEssentialProgramsGamble = new Swiper('.essential-programs-gamble__swiper', {
+                // Optional parameters
+                slidesPerView: "auto",
+                allowTouchMove: true,
+                spaceBetween: 20,
+
+                breakpoints: {
+                    // when window width is >= 320px
+                    320: {
+                        spaceBetween: 16,
+                    },
+                    // when window width is >= 320px
+                    1024.98: {
+                        spaceBetween: 20,
+                    },
+                    // when window width is >= 640px
+                    1920: {
+                        spaceBetween: 20,
+                    }
+                }
+            });
+        }
+
+    });
+});
