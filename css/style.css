@@ -7771,16 +7771,9 @@ h3 {
   }
 }
 
-.gamble {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
 .gamble__body {
   position: relative;
   width: 100%;
-  overflow: hidden;
 }
 .gamble__body.hide::before {
   position: absolute;
