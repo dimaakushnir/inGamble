@@ -7771,6 +7771,9 @@ h3 {
   }
 }
 
+.gamble__sidebar {
+  margin: -377.2px 0 0 0;
+}
 .gamble__body {
   position: relative;
   width: 100%;
@@ -7804,6 +7807,7 @@ h3 {
   display: flex;
   width: calc(100% - 80px);
   transform: translate(80px, 0);
+  margin: -377.2px 0 0 0;
 }
 @media (max-width: 650.98px) {
   .main-gamble {
