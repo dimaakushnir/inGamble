@@ -3430,7 +3430,6 @@ h3 {
 .lh-gauge__wrapper {
   pointer-events: none;
   opacity: 0;
-  height: 0;
 }
 
 .ibg {
