@@ -3428,7 +3428,7 @@ h3 {
 }
 
 .lh-gauge__wrapper {
-  visibility: hidden;
+  opacity: 0;
 }
 
 .ibg {
