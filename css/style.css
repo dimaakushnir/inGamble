@@ -64,6 +64,8 @@
   --Colors-Purple_Transp: #AD7BFF29;
   --Colors-Grass_Transp: #ACE54E29;
   --Colors-Grass: #ACE54E;
+  --color-pass: green;
+  --color-pass-secondary: lightgreen;
 }
 
 * {
@@ -3427,6 +3429,10 @@ h3 {
     width: 14px;
     height: 14px;
   }
+}
+
+.lh-gauge-arc {
+  display: none;
 }
 
 .ibg {
