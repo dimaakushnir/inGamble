@@ -3431,6 +3431,12 @@ h3 {
   }
 }
 
+.lh-gauge__wrapper {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+}
+
 .ibg {
   background-position: center;
   background-size: cover;
