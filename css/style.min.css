@@ -3428,6 +3428,8 @@ h3 {
 }
 
 .lh-gauge__wrapper {
+  pointer-events: none;
+  opacity: 0;
   position: relative;
   left: 0;
   top: 0;
