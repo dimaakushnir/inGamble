@@ -4354,6 +4354,10 @@ h3 {
   display: flex;
   flex-direction: column;
 }
+.f-button {
+  box-shadow: 0;
+}
+
 .ibg {
   background-position: center;
   background-size: cover;
