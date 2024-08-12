@@ -67,6 +67,7 @@
   --Colors-Grass: #ACE54E;
   --color-pass: green;
   --color-pass-secondary: lightgreen;
+  --f-button-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
 * {
