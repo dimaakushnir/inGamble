@@ -480,6 +480,71 @@ if (sidebar_title_icons) {
     })
 }
 
+// Header Hide
+if (header) {
+    var lastScrollTop = 0;
+    let header_row = document.querySelector('.header__row');
+    let main_gamble = document.querySelector('.main-gamble');
+
+    window.addEventListener("scroll", function () {
+        var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            // Скролл вгору
+            header.classList.add('hide');
+            main_gamble.classList.add('scroll');
+            header_row.classList.add('bg');
+        } else {
+            // Скролл вниз
+            header.classList.remove('hide');
+            main_gamble.classList.remove('scroll');
+
+            setTimeout(function (event) {
+                if (!header.classList.contains('hide')) {
+                    header_row.classList.remove('bg');
+                }
+            }, 800);
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Не дозволяє згортати значення від'ємним
+    }, false);
+}
+
+// Popup
+let popup_close_btns = document.querySelectorAll('.popup-close');
+
+if (popup_close_btns) {
+    popup_close_btns.forEach(function (popup_close_btn) {
+        popup_close_btn.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            popupClose();
+        })
+    })
+}
+
+function popupClose() {
+    let popup_open = document.querySelector('.popup.open');
+
+    if (popup_open) {
+        body.classList.remove('lock');
+        popup_open.classList.remove('open');
+        popup_open.classList.remove('close');
+    }
+}
+
+document.addEventListener('keydown', function (event) {
+    if (event.code === 'Escape') {
+        popupClose();
+    }
+});
+
+document.addEventListener('click', function (event) {
+    if (!event.target.closest('.popup__content') && document.querySelector('.popup.close')) {
+        popupClose();
+    }
+})
+
 
 document.addEventListener("DOMContentLoaded", function () {
     $(document).ready(function () {

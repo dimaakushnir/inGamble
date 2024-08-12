@@ -56,7 +56,6 @@ if (info_popup_open_btns) {
     })
 }
 
-
 document.addEventListener("DOMContentLoaded", function () {
     $(document).ready(function () {
 
