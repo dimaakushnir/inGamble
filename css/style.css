@@ -4355,7 +4355,7 @@ h3 {
   flex-direction: column;
 }
 .f-button {
-  box-shadow: 0;
+  box-shadow: none;
 }
 
 .ibg {
