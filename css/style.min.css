@@ -11317,9 +11317,20 @@ h3 {
   justify-content: space-between;
   align-items: flex-end;
 }
+@media (max-width: 480.98px) {
+  .top-information-loyaltie {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .top-information-loyaltie__title {
   margin: 0 20px 0 0;
   color: var(--Text-Txt_Main, #FFFFFF);
+}
+@media (max-width: 480.98px) {
+  .top-information-loyaltie__title {
+    margin: 0 0 4px 0;
+  }
 }
 .date-top-information-loyaltie {
   font-size: 14px;
@@ -11346,7 +11357,7 @@ h3 {
 .item-information-loyaltie {
   border-radius: var(--SystemCorners-Small, 8px);
   overflow: hidden;
-  padding: 16px 12px;
+  padding: 18px 12px;
   background: var(--BG-Bg_4, #1C1C1C);
   position: relative;
 }
@@ -11357,6 +11368,14 @@ h3 {
   height: 100%;
   top: 0;
   left: 0;
+}
+@media (max-width: 650.98px) {
+  .item-information-loyaltie {
+    padding: 16px 12px;
+  }
+}
+.item-information-loyaltie.active {
+  padding-bottom: 16px;
 }
 .item-information-loyaltie_begginer::before {
   background: rgba(255, 255, 255, 0.05);
@@ -11794,6 +11813,158 @@ h3 {
     font-size: 12px;
     line-height: 14.4px;
   }
+}
+
+.item-inner-information-loyaltie_only {
+  position: relative;
+  border-radius: var(--SystemCorners-Small, 8px);
+  padding: 18px 12px;
+  background: var(--BG-Bg_4, #1C1C1C);
+}
+.item-inner-information-loyaltie_only::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.item-inner-information-loyaltie_only:not(:last-child) {
+  margin: 0 0 12px 0;
+}
+.item-inner-information-loyaltie_only .top-item-inner-information-loyaltie {
+  position: relative;
+  z-index: 1;
+}
+.item-inner-information-loyaltie_only .item-inner-information-loyaltie__body {
+  position: relative;
+  z-index: 1;
+}
+.item-inner-information-loyaltie_only .item-inner-information-loyaltie__body .item-inner-information-loyaltie__row {
+  margin: 0;
+  padding: 16px 12px;
+  border-radius: var(--SystemCorners-ExtraSmall, 6px);
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.1490196078);
+}
+.item-inner-information-loyaltie_only .item-inner-information-loyaltie__body .item-inner-information-loyaltie__column {
+  flex: 1 1 100%;
+  padding: 0;
+}
+.item-inner-information-loyaltie_only .item-inner-information-loyaltie__wrapper {
+  padding: 16px 0 0 0;
+}
+.item-inner-information-loyaltie_only .top-item-inner-information-loyaltie__level {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+}
+@media (max-width: 650.98px) {
+  .item-inner-information-loyaltie_only .top-item-inner-information-loyaltie__level {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.item-inner-information-loyaltie_only.active {
+  padding-bottom: 16px;
+}
+@media (max-width: 650.98px) {
+  .item-inner-information-loyaltie_only {
+    padding: 16px 12px;
+  }
+  .item-inner-information-loyaltie_only:not(:last-child) {
+    margin: 0 0 8px 0;
+  }
+}
+.item-inner-information-loyaltie_begginer::before {
+  background: rgba(255, 255, 255, 0.05);
+}
+.item-inner-information-loyaltie_begginer .top-item-inner-information-loyaltie__icon svg {
+  fill: var(--Text-Txt_Sec, rgba(255, 255, 255, 0.5019607843));
+}
+.item-inner-information-loyaltie_begginer .top-item-inner-information-loyaltie__icons-item {
+  fill: var(--Text-Txt_Sec, rgba(255, 255, 255, 0.5019607843));
+}
+.item-inner-information-loyaltie_amateur::before {
+  background: rgba(110, 201, 149, 0.1);
+}
+.item-inner-information-loyaltie_amateur .top-item-inner-information-loyaltie__icon svg {
+  fill: var(--Colors-Green, #76DBA1);
+}
+.item-inner-information-loyaltie_amateur .top-item-inner-information-loyaltie__icons-item {
+  fill: var(--Colors-Green, #76DBA1);
+}
+.item-inner-information-loyaltie_hustler::before {
+  background: rgba(172, 229, 78, 0.1);
+}
+.item-inner-information-loyaltie_hustler .top-item-inner-information-loyaltie__icon svg {
+  fill: var(--Colors-Grass, #ACE54E);
+}
+.item-inner-information-loyaltie_hustler .top-item-inner-information-loyaltie__icons-item {
+  fill: var(--Colors-Grass, #ACE54E);
+}
+.item-inner-information-loyaltie_semi-pro::before {
+  background: rgba(131, 209, 252, 0.1);
+}
+.item-inner-information-loyaltie_semi-pro .top-item-inner-information-loyaltie__icon svg {
+  fill: var(--Colors-Ocean, #83D1FC);
+}
+.item-inner-information-loyaltie_semi-pro .top-item-inner-information-loyaltie__icons-item {
+  fill: var(--Colors-Ocean, #83D1FC);
+}
+.item-inner-information-loyaltie_professional::before {
+  background: rgba(94, 119, 252, 0.1);
+}
+.item-inner-information-loyaltie_professional .top-item-inner-information-loyaltie__icon svg {
+  fill: var(--Colors-Deep-Blue, #5E78FF);
+}
+.item-inner-information-loyaltie_professional .top-item-inner-information-loyaltie__icons-item {
+  fill: var(--Colors-Deep-Blue, #5E78FF);
+}
+.item-inner-information-loyaltie_expert::before {
+  background: rgba(173, 122, 255, 0.1);
+}
+.item-inner-information-loyaltie_expert .top-item-inner-information-loyaltie__icon svg {
+  fill: var(--Colors-Purple, #AD7BFF);
+}
+.item-inner-information-loyaltie_expert .top-item-inner-information-loyaltie__icons-item {
+  fill: var(--Colors-Purple, #AD7BFF);
+}
+.item-inner-information-loyaltie_veteran::before {
+  background: rgba(225, 0, 230, 0.1);
+}
+.item-inner-information-loyaltie_veteran .top-item-inner-information-loyaltie__icon svg {
+  fill: var(--Colors-Violet, #E100E6);
+}
+.item-inner-information-loyaltie_veteran .top-item-inner-information-loyaltie__icons-item {
+  fill: var(--Colors-Violet, #E100E6);
+}
+.item-inner-information-loyaltie_master::before {
+  background: rgba(212, 165, 0, 0.1);
+}
+.item-inner-information-loyaltie_master .top-item-inner-information-loyaltie__icon svg {
+  fill: var(--Colors-Gold, #D4A500);
+}
+.item-inner-information-loyaltie_master .top-item-inner-information-loyaltie__icons-item {
+  fill: var(--Colors-Gold, #D4A500);
+}
+.item-inner-information-loyaltie_grand-master::before {
+  background: rgba(249, 107, 47, 0.1);
+}
+.item-inner-information-loyaltie_grand-master .top-item-inner-information-loyaltie__icon svg {
+  fill: var(--Colors-Orange, #F96B2F);
+}
+.item-inner-information-loyaltie_grand-master .top-item-inner-information-loyaltie__icons-item {
+  fill: var(--Colors-Orange, #F96B2F);
+}
+.item-inner-information-loyaltie_ace::before {
+  background: rgba(255, 50, 50, 0.1);
+}
+.item-inner-information-loyaltie_ace .top-item-inner-information-loyaltie__icon svg {
+  fill: var(--Colors-Red, #FF3232);
+}
+.item-inner-information-loyaltie_ace .top-item-inner-information-loyaltie__icons-item {
+  fill: var(--Colors-Red, #FF3232);
 }
 
 .gamble {
