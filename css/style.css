@@ -3914,9 +3914,15 @@ h3 {
     margin: -36px 0 46px 0;
     position: relative;
   }
+  .content-casino-info__top-panel:not(:last-child) {
+    margin: -36px 0 46px 0;
+  }
 }
 @media (max-width: 650.98px) {
   .content-casino-info__top-panel {
+    margin: -26px 0 36px 0;
+  }
+  .content-casino-info__top-panel:not(:last-child) {
     margin: -26px 0 36px 0;
   }
 }
