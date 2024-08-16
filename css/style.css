@@ -3004,7 +3004,7 @@ h3 {
 }
 .subscribe__body {
   position: relative;
-  padding: 0 240px 0 150px;
+  padding: 0 80px 0 50px;
   border-radius: var(--SystemCorners-Medium, 12px);
   overflow: hidden;
 }
@@ -3851,6 +3851,9 @@ h3 {
 .content-casino-info__top-panel {
   display: flex;
   align-items: center;
+}
+.content-casino-info__top-panel:not(:last-child) {
+  margin: 0 0 16px 0;
 }
 .content-casino-info__top-panel .info-casino-card__stake-rating {
   margin: 0 12px 0 0;
@@ -7362,7 +7365,7 @@ h3 {
 
 .like-get-bonus {
   width: 100%;
-  max-width: 600px;
+  max-width: 760px;
 }
 .like-get-bonus__body {
   padding: 20px;
@@ -8235,6 +8238,24 @@ h3 {
   }
 }
 
+.more-staket-simple-bonus .slider__body:not(:last-child) {
+  margin: 0 0 12px 0;
+}
+@media (max-width: 480.98px) {
+  .more-staket-simple-bonus .slider__body:not(:last-child) {
+    margin: 0 0 6px 0;
+  }
+}
+
+.other-best-reload-simple-bonus .slider__body:not(:last-child) {
+  margin: 0 0 12px 0;
+}
+@media (max-width: 480.98px) {
+  .other-best-reload-simple-bonus .slider__body:not(:last-child) {
+    margin: 0 0 6px 0;
+  }
+}
+
 .review__breadcrumbs:not(:last-child) {
   margin: 0 0 24px 0;
 }
@@ -8583,6 +8604,7 @@ h3 {
 .item-loyalty-review__label {
   font-size: 16px;
   line-height: 22px;
+  font-weight: 400;
   color: var(--Colors-Yellow, #FFCF23);
 }
 .item-loyalty-review__label:not(:last-child) {
@@ -11240,6 +11262,7 @@ h3 {
   }
 }
 .info-loyaltie__title {
+  font-weight: 700;
   color: var(--Text-Txt_Main, #FFFFFF);
 }
 .info-loyaltie__title:not(:last-child) {
@@ -11325,6 +11348,7 @@ h3 {
 }
 .top-information-loyaltie__title {
   margin: 0 20px 0 0;
+  font-weight: 700;
   color: var(--Text-Txt_Main, #FFFFFF);
 }
 @media (max-width: 480.98px) {
@@ -11357,7 +11381,7 @@ h3 {
 .item-information-loyaltie {
   border-radius: var(--SystemCorners-Small, 8px);
   overflow: hidden;
-  padding: 18px 12px;
+  padding: 16px 12px;
   background: var(--BG-Bg_4, #1C1C1C);
   position: relative;
 }
@@ -11368,11 +11392,6 @@ h3 {
   height: 100%;
   top: 0;
   left: 0;
-}
-@media (max-width: 650.98px) {
-  .item-information-loyaltie {
-    padding: 16px 12px;
-  }
 }
 .item-information-loyaltie.active {
   padding-bottom: 16px;
@@ -11818,7 +11837,7 @@ h3 {
 .item-inner-information-loyaltie_only {
   position: relative;
   border-radius: var(--SystemCorners-Small, 8px);
-  padding: 18px 12px;
+  padding: 16px 12px;
   background: var(--BG-Bg_4, #1C1C1C);
 }
 .item-inner-information-loyaltie_only::before {
