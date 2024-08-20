@@ -492,12 +492,12 @@ if (header) {
         if (currentScroll > lastScrollTop) {
             // Скролл вгору
             header.classList.add('hide');
-            main_gamble.classList.add('scroll');
+            // main_gamble.classList.add('scroll');
             header_row.classList.add('bg');
         } else {
             // Скролл вниз
             header.classList.remove('hide');
-            main_gamble.classList.remove('scroll');
+            // main_gamble.classList.remove('scroll');
 
             setTimeout(function (event) {
                 if (!header.classList.contains('hide')) {
