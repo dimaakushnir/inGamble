@@ -11076,10 +11076,8 @@ h3 {
     line-height: 24px;
   }
 }
-@media (max-width: 380px) {
-  .loyaltie__casino-info .main-casino-info {
-    padding: 150px 12px 0 12px;
-  }
+.loyaltie__casino-info .main-casino-info {
+  padding: 0 12px 100% 12px;
 }
 @media (max-width: 1460.98px) {
   .loyaltie__casino-info .main-casino-info__image.ibg {
@@ -11089,6 +11087,11 @@ h3 {
     -webkit-transform: scale(1.1);
     -o-transform: scale(1.1);
     transform: scale(1.1);
+  }
+}
+@media (max-width: 992.98px) {
+  .loyaltie__casino-info .main-casino-info__image.ibg {
+    transform: scale(1.1) translate(0, -5%);
   }
 }
 @media (max-width: 992.98px) {
