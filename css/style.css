@@ -4286,6 +4286,8 @@ h3 {
 
 .lh-gauge__wrapper {
   opacity: 0;
+  z-index: 1000;
+  pointer-events: none;
 }
 
 .popup {
