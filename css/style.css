@@ -1286,6 +1286,12 @@ h3 {
   }
 }
 
+.casino-card__top {
+  position: relative;
+}
+.casino-card__top:not(:last-child) {
+  margin: 0 0 11px 0;
+}
 .casino-card__image-block {
   border-radius: var(--SystemCorners-Medium, 12px);
   overflow: hidden;
@@ -6309,6 +6315,17 @@ h3 {
     opacity: 1;
     visibility: visible;
     font-size: 18px;
+  }
+  .sidebar-gamble.active .title-filters-sidebar-gamble__text.selected {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+  .sidebar-gamble.active .title-filters-sidebar-gamble__text.selected .title-filter-selected__nubmer {
+    color: var(--Text-Txt_Main, #FFFFFF);
+  }
+  .sidebar-gamble.active .title-filters-sidebar-gamble__text.selected .title-filter-selected__arrow {
+    display: none;
   }
 }
 .top-sidebar-gamble {
@@ -12004,6 +12021,396 @@ h3 {
   fill: var(--Colors-Red, #FF3232);
 }
 
+.filter-scenarios__filter-selected:not(:last-child) {
+  margin: 0 0 16px 0;
+}
+.filter-scenarios__results:not(:last-child) {
+  margin: 0 0 20px 0;
+}
+@media (max-width: 900px) {
+  .filter-scenarios__results:not(:last-child) {
+    margin: 0 0 16px 0;
+  }
+}
+.filter-scenarios__filter-tags:not(:last-child) {
+  margin: 0 0 40px 0;
+}
+@media (max-width: 768.98px) {
+  .filter-scenarios__filter-tags:not(:last-child) {
+    margin: 0 0 24px 0;
+  }
+}
+.filter-scenarios__bottom-filter-tags:not(:last-child) {
+  margin: 0 0 60px 0;
+}
+@media (max-width: 650.98px) {
+  .filter-scenarios__bottom-filter-tags:not(:last-child) {
+    margin: 0 0 40px 0;
+  }
+}
+.filter-scenarios__subscribe:not(:last-child) {
+  margin: 0 0 60px 0;
+}
+@media (max-width: 650.98px) {
+  .filter-scenarios__subscribe:not(:last-child) {
+    margin: 0 0 40px 0;
+  }
+}
+.filter-scenarios__bottom-info {
+  margin: 0 0 20px 0;
+}
+@media (max-width: 650.98px) {
+  .filter-scenarios__bottom-info {
+    margin: 0;
+  }
+}
+
+.results-filter-scenarios__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.results-filter-scenarios__top {
+  width: 100%;
+}
+.results-filter-scenarios__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+.results-filter-scenarios__column {
+  flex: 0 1 20%;
+  margin: 0 0 40px 0;
+  padding: 0 10px;
+}
+@media (max-width: 1650.98px) {
+  .results-filter-scenarios__column {
+    flex: 0 1 25%;
+  }
+}
+@media (max-width: 1300px) {
+  .results-filter-scenarios__column {
+    flex: 0 1 33.333%;
+  }
+}
+@media (max-width: 900px) {
+  .results-filter-scenarios__column {
+    flex: 0 1 50%;
+    margin: 0 0 24px 0;
+  }
+}
+@media (max-width: 550px) {
+  .results-filter-scenarios__column {
+    flex: 1 1 100%;
+    display: none;
+  }
+  .results-filter-scenarios__column:nth-child(1), .results-filter-scenarios__column:nth-child(2), .results-filter-scenarios__column:nth-child(3), .results-filter-scenarios__column:nth-child(4), .results-filter-scenarios__column:nth-child(5), .results-filter-scenarios__column:nth-child(6), .results-filter-scenarios__column:nth-child(7) {
+    display: block;
+  }
+}
+.results-filter-scenarios__btn-more {
+  margin: 0 0 40px 0;
+}
+@media (max-width: 900px) {
+  .results-filter-scenarios__btn-more {
+    margin: 0 0 24px 0;
+  }
+}
+.results-filter-scenarios .casino-card {
+  position: relative;
+}
+.results-filter-scenarios .casino-card__image-block {
+  height: auto;
+  padding: 0 8px 50.432% 8px;
+}
+.results-filter-scenarios .casino-card__bnt {
+  top: auto;
+  bottom: 8px;
+}
+
+.filter-selected__row {
+  display: flex;
+  align-items: flex-start;
+}
+@media (max-width: 650.98px) {
+  .filter-selected__body {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    max-height: none;
+    z-index: 1000;
+    background-color: #171719;
+    flex-direction: column;
+  }
+  .filter-selected__body.active {
+    display: flex;
+  }
+}
+.filter-selected__top {
+  display: none;
+}
+@media (max-width: 650.98px) {
+  .filter-selected__top {
+    display: flex;
+  }
+}
+@media (max-width: 650.98px) {
+  .filter-selected__btns-block {
+    flex: 1 1 100%;
+    overflow: hidden;
+    padding: 8px 18px 8px 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.filter-selected__btns {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -4px;
+  max-height: 80px;
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 650.98px) {
+  .filter-selected__btns {
+    width: 100%;
+    max-height: none;
+    padding: 0 6px 0 16px;
+    overflow-y: auto;
+  }
+  .filter-selected__btns::-webkit-scrollbar {
+    width: 2px;
+  }
+  .filter-selected__btns::-webkit-scrollbar-track {
+    background: var(--BG-Bg_3, #2C2C28);
+  }
+  .filter-selected__btns::-webkit-scrollbar-thumb {
+    background: var(--Colors-Yellow, #FFCF23);
+  }
+}
+.filter-selected__btns-column {
+  padding: 0 4px;
+  margin: 0 0 8px 0;
+}
+@media (min-width: 650.98px) {
+  .filter-selected__btns-column.hide {
+    display: none;
+  }
+  .filter-selected__btns-column.show-hide {
+    display: none;
+  }
+}
+@media (max-width: 650.98px) {
+  .filter-selected__btns-column_clear {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 650.98px) {
+  .filter-selected__btns-column_more.hide {
+    display: block;
+  }
+  .filter-selected__btns-column_more.show-hide {
+    display: block;
+  }
+}
+.filter-selected__btn {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--SystemCorners-Small, 8px);
+  overflow: hidden;
+  border: 1px solid var(--BG-Bg_3, #2C2C28);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 17.76px;
+  color: var(--Text-Txt_Sec, rgba(255, 255, 255, 0.5019607843));
+  background: #111111;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  padding: 0 6px 0 12px;
+}
+.filter-selected__btn span {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0 4px;
+}
+.filter-selected__btn span svg {
+  width: 8.67px;
+  height: 8.67px;
+  fill: var(--Colors-Yellow, #FFCF23);
+}
+@media (min-width: 1355.98px) {
+  .filter-selected__btn:hover {
+    background: var(--BG-Bg_1, #171719);
+  }
+}
+.filter-selected__btn_clear {
+  border: 1px solid rgba(255, 207, 35, 0.1607843137);
+  padding: 0 12px;
+}
+.filter-selected__btn_clear .bottom-form-filters__btn-icon {
+  display: none;
+}
+@media (max-width: 650.98px) {
+  .filter-selected__btn_clear .bottom-form-filters__btn-icon {
+    display: flex;
+    flex: 0 0 13px;
+    width: 13px;
+    height: 17px;
+    margin: 0 10px 0 0;
+  }
+  .filter-selected__btn_clear .bottom-form-filters__btn-icon img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+@media (max-width: 650.98px) {
+  .filter-selected__btn_clear {
+    width: 100%;
+    height: 40px;
+    padding: 7px 14px 7px 12px;
+    border: 1px solid var(--BG-Bg_3, #2C2C28);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    color: var(--Text-Txt_Main, #FFFFFF);
+    justify-content: center;
+    background: linear-gradient(180deg, #1E1E1E 0%, #101010 100%);
+  }
+}
+.filter-selected__btn_more {
+  padding: 0 12px;
+  position: sticky;
+  bottom: 0;
+}
+@media (max-width: 650.98px) {
+  .filter-selected__btn_more {
+    display: none;
+  }
+}
+.filter-selected__more {
+  height: 72px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.filter-selected__bottom {
+  display: none;
+}
+@media (max-width: 650.98px) {
+  .filter-selected__bottom {
+    display: flex;
+    padding: 16px;
+    background: linear-gradient(180deg, #1E1E1E 0%, #101010 100%);
+    border-top: 1px solid var(--BG-Bg_2, #232320);
+  }
+}
+
+.title-filter-selected {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 17.76px;
+  margin: 0 12px 8px 0;
+  white-space: nowrap;
+  padding: 7px 0;
+}
+@media (max-width: 650.98px) {
+  .title-filter-selected {
+    width: 100%;
+    padding: 0 16px;
+    height: 44px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 20px 0 8px 0;
+    cursor: pointer;
+  }
+}
+.title-filter-selected__text {
+  color: var(--Text-Txt_Sec, rgba(255, 255, 255, 0.5019607843));
+  margin: 0 2px 0 0;
+}
+@media (max-width: 650.98px) {
+  .title-filter-selected__text {
+    color: var(--Text-Txt_Main, #FFFFFF);
+  }
+}
+.title-filter-selected__nubmer {
+  color: var(--Text-Txt_Main, #FFFFFF);
+}
+@media (max-width: 650.98px) {
+  .title-filter-selected__nubmer {
+    color: var(--Colors-Yellow, #FFCF23);
+  }
+}
+.title-filter-selected__arrow {
+  display: none;
+}
+@media (max-width: 650.98px) {
+  .title-filter-selected__arrow {
+    flex: 1 1 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    stroke: var(--Colors-Accent, #FFCF23);
+    stroke-width: 1.5px;
+    margin: 0 0 0 10px;
+  }
+  .title-filter-selected__arrow svg {
+    width: 10px;
+    height: 6px;
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+.top-filter-selected {
+  padding: 31px 16px 11px 16px;
+  border-bottom: 1px solid var(--BG-Bg_4, #1C1C1C);
+}
+.top-filter-selected__back {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--Text-Txt_Main, #FFFFFF);
+}
+.top-filter-selected__back span {
+  flex: 0 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  stroke: var(--Colors-Accent, #FFCF23);
+  stroke-width: 1.5px;
+  margin: 0 8px 0 0;
+}
+.top-filter-selected__back span svg {
+  width: 10px;
+  height: 6px;
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
 .gamble {
   position: absolute;
   top: 0;
@@ -13059,6 +13466,17 @@ h3 {
   .main-gamble.resize .info-review .block-info-review_tools {
     flex: 0 1 50%;
   }
+}
+.main-gamble.resize .results-filter-scenarios .results-filter-scenarios__column {
+  flex: 0 1 25%;
+}
+.main-gamble.resize .results-filter-scenarios .results-filter-scenarios__column .casino-card__image-block {
+  height: auto;
+  padding: 0 8px 50.432% 8px;
+}
+.main-gamble.resize .results-filter-scenarios .results-filter-scenarios__column .casino-card__bnt {
+  top: auto;
+  bottom: 8px;
 }
 .main-gamble__body {
   width: 100%;
