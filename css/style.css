@@ -177,10 +177,6 @@ body.lock {
   overflow: hidden;
 }
 
-html::-webkit-scrollbar {
-  display: none;
-}
-
 .wrapper {
   width: 100%;
   min-height: 100%;
@@ -12411,6 +12407,547 @@ h3 {
   transform: rotate(-90deg);
 }
 
+.loyaltie-programs__filter-tags:not(:last-child) {
+  margin: 0 0 40px 0;
+}
+.loyaltie-programs__breadcrumbs:not(:last-child) {
+  margin: 0 0 24px 0;
+}
+@media (max-width: 768.98px) {
+  .loyaltie-programs__breadcrumbs:not(:last-child) {
+    margin: 0 0 16px 0;
+  }
+}
+.loyaltie-programs__bottom-filter-tags:not(:last-child) {
+  margin: 0 0 60px 0;
+}
+@media (max-width: 1650.98px) {
+  .loyaltie-programs__bottom-filter-tags:not(:last-child) {
+    margin: 0 0 40px 0;
+  }
+}
+.loyaltie-programs__subscribe:not(:last-child) {
+  margin: 0 0 60px 0;
+}
+@media (max-width: 1650.98px) {
+  .loyaltie-programs__subscribe:not(:last-child) {
+    margin: 0 0 40px 0;
+  }
+}
+.loyaltie-programs__main:not(:last-child) {
+  margin: 0 0 20px 0;
+}
+@media (max-width: 1650.98px) {
+  .loyaltie-programs__main:not(:last-child) {
+    margin: 0 0 0 0;
+  }
+}
+@media (max-width: 992.98px) {
+  .loyaltie-programs__main:not(:last-child) {
+    margin: 0 0 16px 0;
+  }
+}
+.loyaltie-programs__items {
+  margin: 0 0 40px 0;
+}
+@media (max-width: 992.98px) {
+  .loyaltie-programs__items {
+    margin: 0 0 24px 0;
+  }
+}
+.loyaltie-programs__item:not(:last-child) {
+  margin: 0 0 24px 0;
+}
+
+@media (max-width: 1650.98px) {
+  .item-loyaltie-programs {
+    position: relative;
+  }
+}
+.item-loyaltie-programs__row {
+  display: flex;
+  position: relative;
+}
+@media (max-width: 992.98px) {
+  .item-loyaltie-programs__row {
+    flex-direction: column;
+    background: url("../img/bg/10.jpg") center repeat;
+    border-radius: var(--SystemCorners-Medium, 12px);
+  }
+}
+.item-loyaltie-programs__main {
+  flex: 0 0 433px;
+  margin: 0 20px 0 0;
+  height: 100%;
+}
+@media (max-width: 1650.98px) {
+  .item-loyaltie-programs__main {
+    flex: 0 0 293px;
+    padding: 0 0 72px 0;
+  }
+}
+@media (max-width: 1355.98px) {
+  .item-loyaltie-programs__main {
+    flex: 0 0 257px;
+  }
+}
+@media (max-width: 992.98px) {
+  .item-loyaltie-programs__main {
+    flex: auto;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+.item-loyaltie-programs__image {
+  height: 290px;
+  width: 433px;
+  border-radius: var(--SystemCorners-Medium, 12px);
+  background: var(--BG-Bg_2, #232320);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.item-loyaltie-programs__image img {
+  width: 305px;
+  height: 110px;
+}
+@media (max-width: 1650.98px) {
+  .item-loyaltie-programs__image {
+    width: 293px;
+    height: 196px;
+  }
+  .item-loyaltie-programs__image img {
+    width: 189.83px;
+    height: 68.46px;
+  }
+}
+@media (max-width: 1355.98px) {
+  .item-loyaltie-programs__image {
+    width: 257px;
+    height: 172px;
+  }
+  .item-loyaltie-programs__image img {
+    width: 166.51px;
+    height: 60.05px;
+  }
+}
+@media (max-width: 992.98px) {
+  .item-loyaltie-programs__image {
+    width: 100%;
+    height: 150px;
+  }
+  .item-loyaltie-programs__image img {
+    width: 241.9px;
+    height: 87.24px;
+  }
+}
+.item-loyaltie-programs__content {
+  flex: 1 1 100%;
+}
+
+.content-item-loyaltie-programs {
+  border-radius: var(--SystemCorners-Medium, 12px);
+  background: url("../img/bg/10.jpg") center repeat;
+  padding: 20px;
+}
+@media (min-width: 1650.98px) {
+  .content-item-loyaltie-programs {
+    position: relative;
+  }
+}
+@media (max-width: 1650.98px) {
+  .content-item-loyaltie-programs {
+    padding: 20px 20px 8px 20px;
+  }
+}
+@media (max-width: 992.98px) {
+  .content-item-loyaltie-programs {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 12px;
+  }
+}
+.content-item-loyaltie-programs__top:not(:last-child) {
+  margin: 0 0 22px 0;
+}
+@media (max-width: 1650.98px) {
+  .content-item-loyaltie-programs__top:not(:last-child) {
+    margin: 0 0 16px 0;
+  }
+}
+@media (max-width: 992.98px) {
+  .content-item-loyaltie-programs__top:not(:last-child) {
+    margin: 0 0 24px 0;
+  }
+}
+.content-item-loyaltie-programs__features {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -6px;
+}
+.content-item-loyaltie-programs__features:not(:last-child) {
+  margin: 0 -6px 10px -6px;
+}
+@media (max-width: 1650.98px) {
+  .content-item-loyaltie-programs__features:not(:last-child) {
+    margin: 0 -6px 0 -6px;
+  }
+}
+@media (max-width: 992.98px) {
+  .content-item-loyaltie-programs__features {
+    order: 3;
+  }
+}
+.content-item-loyaltie-programs__features .features-essential-programs-gamble__column {
+  flex: 0 1 25%;
+  margin: 0 0 12px 0;
+  padding: 0 6px;
+}
+.content-item-loyaltie-programs__features .features-essential-programs-gamble__column:not(:last-child) {
+  margin: 0 0 12px 0;
+}
+@media (max-width: 1650.98px) {
+  .content-item-loyaltie-programs__features .features-essential-programs-gamble__column {
+    flex: 0 1 33.333%;
+  }
+}
+@media (max-width: 1355.98px) {
+  .content-item-loyaltie-programs__features .features-essential-programs-gamble__column {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 480.98px) {
+  .content-item-loyaltie-programs__features .features-essential-programs-gamble__column {
+    flex: 1 1 100%;
+  }
+}
+@media (min-width: 1650.98px) {
+  .content-item-loyaltie-programs__features .features-essential-programs-gamble__column_rating {
+    position: absolute;
+    bottom: 8px;
+    right: 20px;
+    padding: 0;
+  }
+}
+@media (max-width: 992.98px) {
+  .content-item-loyaltie-programs__features .features-essential-programs-gamble__column_rating {
+    flex: 1 1 100%;
+    margin: 12px 0 0 0;
+  }
+}
+.content-item-loyaltie-programs__features .features-essential-programs-gamble__item_rating .item-essential-programs-gamble__rating {
+  width: 100%;
+  height: 56px;
+  display: flex;
+}
+@media (max-width: 1650.98px) {
+  .content-item-loyaltie-programs__features .features-essential-programs-gamble__item_rating .item-essential-programs-gamble__rating {
+    height: 52px;
+  }
+}
+@media (max-width: 1355.98px) {
+  .content-item-loyaltie-programs__features .features-essential-programs-gamble__item_rating .item-essential-programs-gamble__rating {
+    height: 51px;
+  }
+}
+@media (max-width: 992.98px) {
+  .content-item-loyaltie-programs__features .features-essential-programs-gamble__item_rating .item-essential-programs-gamble__rating {
+    height: 56px;
+    justify-content: center;
+  }
+}
+@media (max-width: 480.98px) {
+  .content-item-loyaltie-programs__features .features-essential-programs-gamble__item_rating .item-essential-programs-gamble__rating {
+    justify-content: flex-start;
+    padding: 0 8px;
+  }
+}
+@media (max-width: 1650.98px) {
+  .content-item-loyaltie-programs__features .features-essential-programs-gamble__item_rating .item-essential-programs-gamble__rating-number {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 992.98px) {
+  .content-item-loyaltie-programs__features .features-essential-programs-gamble__item_rating .item-essential-programs-gamble__rating-number {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+.content-item-loyaltie-programs__features .features-essential-programs-gamble__item_rating .items-rating-essential-programs-gamble__item {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+}
+@media (max-width: 1355.98px) {
+  .content-item-loyaltie-programs__features .features-essential-programs-gamble__item_rating .items-rating-essential-programs-gamble__item {
+    flex: 0 0 15px;
+    width: 15px;
+    height: 15px;
+  }
+}
+@media (max-width: 992.98px) {
+  .content-item-loyaltie-programs__features .features-essential-programs-gamble__item_rating .items-rating-essential-programs-gamble__item {
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+  }
+}
+.content-item-loyaltie-programs__features .features-essential-programs-gamble__item .features-essential-programs-gamble__icon {
+  flex: 0 0 52px;
+  width: 52px;
+  height: 52px;
+}
+.content-item-loyaltie-programs__features .features-essential-programs-gamble__item .features-essential-programs-gamble__icon img {
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  transform: scale(1.4);
+}
+.content-item-loyaltie-programs__features .features-essential-programs-gamble__item .features-essential-programs-gamble__info {
+  justify-content: center;
+}
+.content-item-loyaltie-programs__features .features-essential-programs-gamble__item .features-essential-programs-gamble__name:not(:last-child) {
+  margin: 0 0 4px 0;
+}
+@media (max-width: 992.98px) {
+  .content-item-loyaltie-programs__bottom {
+    margin: 0 0 24px 0;
+  }
+}
+
+.top-content-item-loyaltie-programs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 992.98px) {
+  .top-content-item-loyaltie-programs {
+    order: 1;
+  }
+}
+.top-content-item-loyaltie-programs__name {
+  color: var(--Text-Txt_Main, #FFFFFF);
+  margin: 0 16px 0 0;
+}
+@media (max-width: 992.98px) {
+  .top-content-item-loyaltie-programs__name {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+}
+.top-content-item-loyaltie-programs .info-casino-card__stake-rating {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 137.5%;
+  align-items: center;
+}
+@media (max-width: 992.98px) {
+  .top-content-item-loyaltie-programs .info-casino-card__stake-rating {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14.4px;
+  }
+}
+.top-content-item-loyaltie-programs .info-casino-card__stake-rating .info-casino-card__stake-rating-icon {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  margin: 0 6px 1.5px 0;
+}
+@media (max-width: 992.98px) {
+  .top-content-item-loyaltie-programs .info-casino-card__stake-rating .info-casino-card__stake-rating-icon {
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+    margin: 0 4px 1.5px 0;
+  }
+}
+
+.bottom-content-item-loyaltie-programs {
+  padding: 0 350px 0 0;
+}
+@media (max-width: 1650.98px) {
+  .bottom-content-item-loyaltie-programs {
+    padding: 0;
+  }
+}
+@media (max-width: 992.98px) {
+  .bottom-content-item-loyaltie-programs {
+    order: 2;
+  }
+}
+.bottom-content-item-loyaltie-programs__btns {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1650.98px) {
+  .bottom-content-item-loyaltie-programs__btns {
+    width: 293px;
+    position: absolute;
+    left: 0;
+    top: 212px;
+  }
+}
+@media (max-width: 1355.98px) {
+  .bottom-content-item-loyaltie-programs__btns {
+    width: 257px;
+    top: 188px;
+  }
+}
+@media (max-width: 992.98px) {
+  .bottom-content-item-loyaltie-programs__btns {
+    width: 100%;
+    top: auto;
+    left: 0;
+    position: relative;
+  }
+}
+@media (max-width: 480.98px) {
+  .bottom-content-item-loyaltie-programs__btns {
+    flex-wrap: wrap;
+  }
+}
+.bottom-content-item-loyaltie-programs__btn-view {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 16px 0 0;
+  height: 56px;
+  padding: 12px 40px 12px 40px;
+  border-radius: var(--SystemCorners-Small, 8px);
+  background: var(--Colors-Yellow, #FFCF23);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 137.5%;
+  color: var(--Text-Txt_Dark, #020202);
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (min-width: 1355.98px) {
+  .bottom-content-item-loyaltie-programs__btn-view:hover {
+    background: #fde075;
+  }
+}
+@media (max-width: 1650.98px) {
+  .bottom-content-item-loyaltie-programs__btn-view {
+    padding: 5px;
+    flex: 0 1 50%;
+    margin: 0 6px 0 0;
+  }
+}
+@media (max-width: 992.98px) {
+  .bottom-content-item-loyaltie-programs__btn-view {
+    height: 44px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 480.98px) {
+  .bottom-content-item-loyaltie-programs__btn-view {
+    flex: 1 1 100%;
+    margin: 0 0 12px 0;
+  }
+}
+.bottom-content-item-loyaltie-programs__btn-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 56px;
+  padding: 10px 24px 10px 24px;
+  border-radius: var(--SystemCorners-Small, 8px);
+  background: var(--BG-Bg_3, #2C2C28);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 137.5%;
+  color: var(--Text-Txt_Main, #FFFFFF);
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (min-width: 1355.98px) {
+  .bottom-content-item-loyaltie-programs__btn-more:hover {
+    background: rgb(47, 47, 45);
+  }
+}
+@media (max-width: 1650.98px) {
+  .bottom-content-item-loyaltie-programs__btn-more {
+    padding: 5px;
+    flex: 0 1 50%;
+    margin: 0 0 0 6px;
+  }
+}
+@media (max-width: 992.98px) {
+  .bottom-content-item-loyaltie-programs__btn-more {
+    height: 44px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 480.98px) {
+  .bottom-content-item-loyaltie-programs__btn-more {
+    flex: 1 1 100%;
+    margin: 0 0 0 0;
+  }
+}
+
+.main-loyaltie-programs__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-loyaltie-programs__top {
+  width: 100%;
+}
+
+.main-loyaltie-programs__items {
+  width: 100%;
+}
+
+.main-loyaltie-programs__btn-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 42px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  color: var(--Text-Txt_Main, #FFFFFF);
+  border-radius: var(--SystemCorners-Small, 8px);
+  background: var(--BG-Bg_2, #232320);
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  margin: 0 0 40px 0;
+}
+@media (min-width: 1355.98px) {
+  .main-loyaltie-programs__btn-more:hover {
+    background: var(--BG-Bg_3, #2C2C28);
+  }
+}
+@media (max-width: 992.98px) {
+  .main-loyaltie-programs__btn-more {
+    margin: 0 0 24px 0;
+  }
+}
+
 .gamble {
   position: absolute;
   top: 0;
@@ -13477,6 +14014,223 @@ h3 {
 .main-gamble.resize .results-filter-scenarios .results-filter-scenarios__column .casino-card__bnt {
   top: auto;
   bottom: 8px;
+}
+.main-gamble.resize .main-loyaltie-programs .bottom-content-item-loyaltie-programs__btn-view {
+  width: 360px;
+}
+@media (max-width: 1895px) {
+  .main-gamble.resize .main-loyaltie-programs .item-loyaltie-programs {
+    position: relative;
+  }
+  .main-gamble.resize .main-loyaltie-programs .item-loyaltie-programs__main {
+    flex: 0 0 293px;
+    padding: 0 0 72px 0;
+  }
+  .main-gamble.resize .main-loyaltie-programs .item-loyaltie-programs__image {
+    width: 293px;
+    height: 196px;
+  }
+  .main-gamble.resize .main-loyaltie-programs .item-loyaltie-programs__image img {
+    width: 189.83px;
+    height: 68.46px;
+  }
+  .main-gamble.resize .main-loyaltie-programs .content-item-loyaltie-programs {
+    padding: 20px 20px 8px 20px;
+    position: static;
+  }
+  .main-gamble.resize .main-loyaltie-programs .content-item-loyaltie-programs__top:not(:last-child) {
+    margin: 0 0 16px 0;
+  }
+  .main-gamble.resize .main-loyaltie-programs .content-item-loyaltie-programs__features:not(:last-child) {
+    margin: 0 -6px 0px -6px;
+  }
+  .main-gamble.resize .main-loyaltie-programs .features-essential-programs-gamble__column {
+    flex: 0 1 33.333%;
+  }
+  .main-gamble.resize .main-loyaltie-programs .features-essential-programs-gamble__column_rating {
+    position: relative;
+    bottom: auto;
+    right: auto;
+  }
+  .main-gamble.resize .main-loyaltie-programs .item-essential-programs-gamble__rating {
+    height: 52px;
+  }
+  .main-gamble.resize .main-loyaltie-programs .bottom-content-item-loyaltie-programs__btns {
+    width: 293px;
+    position: absolute;
+    left: 0;
+    top: 212px;
+  }
+  .main-gamble.resize .main-loyaltie-programs .bottom-content-item-loyaltie-programs__btn-view {
+    padding: 5px;
+    flex: 0 1 50%;
+    margin: 0 6px 0 0;
+  }
+  .main-gamble.resize .main-loyaltie-programs .bottom-content-item-loyaltie-programs__btn-more {
+    padding: 5px;
+    flex: 0 1 50%;
+    margin: 0 0 0 6px;
+  }
+}
+@media (max-width: 1650.98px) {
+  .main-gamble.resize .main-loyaltie-programs .item-essential-programs-gamble__rating {
+    height: 48px;
+    padding: 5px 6.33px 5px 12px;
+  }
+  .main-gamble.resize .main-loyaltie-programs .items-rating-essential-programs-gamble__item {
+    flex: 0 0 12px;
+    width: 12px;
+    height: 12px;
+  }
+}
+@media (max-width: 1430px) {
+  .main-gamble.resize .main-loyaltie-programs .features-essential-programs-gamble__column {
+    flex: 0 1 50%;
+  }
+  .main-gamble.resize .main-loyaltie-programs .items-rating-essential-programs-gamble__item {
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+  }
+}
+@media (max-width: 1355.98px) {
+  .main-gamble.resize .main-loyaltie-programs .item-loyaltie-programs__main {
+    flex: 0 0 257px;
+  }
+  .main-gamble.resize .main-loyaltie-programs .item-loyaltie-programs__image {
+    width: 257px;
+    height: 172px;
+  }
+  .main-gamble.resize .main-loyaltie-programs .item-loyaltie-programs__image img {
+    width: 166.51px;
+    height: 60.05px;
+  }
+  .main-gamble.resize .main-loyaltie-programs .item-essential-programs-gamble__rating {
+    height: 51px;
+    padding: 5px 12px;
+  }
+  .main-gamble.resize .main-loyaltie-programs .items-rating-essential-programs-gamble__item {
+    flex: 0 0 15px;
+    width: 15px;
+    height: 15px;
+  }
+  .main-gamble.resize .main-loyaltie-programs .bottom-content-item-loyaltie-programs__btns {
+    width: 257px;
+    position: absolute;
+    left: 0;
+    top: 188px;
+  }
+}
+@media (max-width: 992.98px) {
+  .main-gamble.resize .main-loyaltie-programs .item-loyaltie-programs__row {
+    flex-direction: column;
+    background: url("../img/bg/10.jpg") center repeat;
+    border-radius: var(--SystemCorners-Medium, 12px);
+  }
+  .main-gamble.resize .main-loyaltie-programs .item-loyaltie-programs__main {
+    flex: auto;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .main-gamble.resize .main-loyaltie-programs .item-loyaltie-programs__image {
+    width: 100%;
+    height: 150px;
+  }
+  .main-gamble.resize .main-loyaltie-programs .item-loyaltie-programs__image img {
+    width: 241.9px;
+    height: 87.24px;
+  }
+  .main-gamble.resize .main-loyaltie-programs .content-item-loyaltie-programs {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 12px;
+  }
+  .main-gamble.resize .main-loyaltie-programs .content-item-loyaltie-programs__top:not(:last-child) {
+    margin: 0 0 24px 0;
+  }
+  .main-gamble.resize .main-loyaltie-programs .content-item-loyaltie-programs__features {
+    order: 3;
+  }
+  .main-gamble.resize .main-loyaltie-programs .features-essential-programs-gamble__column_rating {
+    flex: 1 1 100%;
+    margin: 12px 0 0 0;
+  }
+  .main-gamble.resize .main-loyaltie-programs .item-essential-programs-gamble__rating {
+    height: 56px;
+    justify-content: center;
+  }
+  .main-gamble.resize .main-loyaltie-programs .item-essential-programs-gamble__rating-number {
+    font-size: 26px;
+    line-height: 32px;
+  }
+  .main-gamble.resize .main-loyaltie-programs .items-rating-essential-programs-gamble__item {
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+  }
+  .main-gamble.resize .main-loyaltie-programs .content-item-loyaltie-programs__bottom {
+    margin: 0 0 24px 0;
+  }
+  .main-gamble.resize .main-loyaltie-programs .top-content-item-loyaltie-programs {
+    order: 1;
+  }
+  .main-gamble.resize .main-loyaltie-programs .top-content-item-loyaltie-programs__name {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  .main-gamble.resize .main-loyaltie-programs .info-casino-card__stake-rating {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14.4px;
+  }
+  .main-gamble.resize .main-loyaltie-programs .info-casino-card__stake-rating-icon {
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+    margin: 0 4px 1.5px 0;
+  }
+  .main-gamble.resize .main-loyaltie-programs .bottom-content-item-loyaltie-programs {
+    order: 2;
+  }
+  .main-gamble.resize .main-loyaltie-programs .bottom-content-item-loyaltie-programs__btns {
+    width: 100%;
+    top: auto;
+    left: 0;
+    position: relative;
+  }
+  .main-gamble.resize .main-loyaltie-programs .bottom-content-item-loyaltie-programs__btn-view {
+    height: 44px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .main-gamble.resize .main-loyaltie-programs .bottom-content-item-loyaltie-programs__btn-more {
+    height: 44px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 480.98px) {
+  .main-gamble.resize .main-loyaltie-programs .features-essential-programs-gamble__column {
+    flex: 1 1 100%;
+  }
+  .main-gamble.resize .main-loyaltie-programs .item-essential-programs-gamble__rating {
+    justify-content: flex-start;
+    padding: 0 8px;
+  }
+  .main-gamble.resize .main-loyaltie-programs .bottom-content-item-loyaltie-programs__btns {
+    flex-wrap: wrap;
+  }
+  .main-gamble.resize .main-loyaltie-programs .bottom-content-item-loyaltie-programs__btn-view {
+    flex: 1 1 100%;
+    margin: 0 0 12px 0;
+  }
+  .main-gamble.resize .main-loyaltie-programs .bottom-content-item-loyaltie-programs__btn-more {
+    flex: 1 1 100%;
+    margin: 0 0 0 0;
+  }
 }
 .main-gamble__body {
   width: 100%;
