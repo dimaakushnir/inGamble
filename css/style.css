@@ -15800,13 +15800,35 @@ h3 {
   transition: all 0.3s ease 0s;
 }
 @media (max-width: 650.98px) {
-  .main-gamble__best-casinos-2024 .slider-best-casinos-2024-gamble.scrolled {
-    padding: 0 0 0 183px;
+  .main-gamble__best-casinos-2024 .slider-best-casinos-2024-gamble {
+    padding: 0;
+  }
+}
+@media (max-width: 650.98px) {
+  .main-gamble__best-casinos-2024 .slider-best-casinos-2024-gamble.scrolled .slider-best-casinos-2024-gamble__body {
+    transform: translate(183px, 38px);
+  }
+}
+@media (max-width: 480.98px) and (max-width: 480.98px) {
+  .main-gamble__best-casinos-2024 .slider-best-casinos-2024-gamble.scrolled .slider-best-casinos-2024-gamble__body {
+    transform: translate(146px, 18px);
+  }
+}
+.main-gamble__best-casinos-2024 .slider-best-casinos-2024-gamble__body {
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (max-width: 650.98px) {
+  .main-gamble__best-casinos-2024 .slider-best-casinos-2024-gamble__body {
+    transform: translate(263px, 38px);
   }
 }
 @media (max-width: 480.98px) {
-  .main-gamble__best-casinos-2024 .slider-best-casinos-2024-gamble.scrolled {
-    padding: 0 0 0 146px;
+  .main-gamble__best-casinos-2024 .slider-best-casinos-2024-gamble__body {
+    transform: translate(226px, 18px);
   }
 }
 @media (max-width: 480.98px) {
